@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  transition: 0.1s linear;
+  transition: 0.2s linear;
 }
 .header__images-image.active {
   z-index: 2;

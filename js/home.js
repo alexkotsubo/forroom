@@ -5,7 +5,7 @@
 window.addEventListener('DOMContentLoaded', e => {
 	const headerImages = document.querySelectorAll('#header .header__images-image');
 	const seconds = 5.5 * 1000;
-	const step = 0.1 * 1000;
+	const step = 0.2 * 1000;
 	let i = 0;
 	const setActive = i => {
 		headerImages[i].classList.add('active');
