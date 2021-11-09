@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ForRoom - Ремонтно-строительная компания в Одессе</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/dticon.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/home.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!-- &family=Montserrat+Alternates:wght@400;500&display=swap -->
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</a>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Price Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div class="header__images">
+				<div class="header__images-image" style="background-image: url('img/home/header-slider/1.jpg');"></div>
+				<div class="header__images-image" style="background-image: url('img/home/header-slider/2.jpg');"></div>
+				<div class="header__images-image" style="background-image: url('img/home/header-slider/3.jpg');"></div>
+			</div>
+
+			<!-- Nav -->
+
+			<nav class="nav fixed-padding" id="nav">
+				<div class="nav__body">
+					<a href="tel:+380487955575" class="nav__phone"><i aria-hidden="true" class="fas fa-phone"></i></a>
+					<div class="nav__logo">
+						<a class="nav__logo-link" href="#"><img src="img/logo.png" alt="ForRoom"></a>
+					</div>
+					<div class="nav__burger burger" id="nav-burger">
+						<div class="burger__btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="burger__bg"></div>
+					
+						<div class="burger__menu">
+							<div class="burger__nav">
+								<div class="burger__close-btn"></div>
+							</div>
+
+							<div class="burger__menu-wrap">
+								<div class="burger__logo">
+									<a href="#" class="burger__logo-link">
+										<img src="img/logo.png" alt="ForRoom">
+									</a>
+								</div>
+
+								<ul class="burger__list">
+									<li><a href="#" class="burger__link">ForRoom</a></li>
+									<li><a href="#" class="burger__link">ForHouse</a></li>
+									<li><a href="#" class="burger__link">Форум</a></li>
+								</ul>
+
+								<ul class="burger__buttons">
+									<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+									<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+									<li><a href="#" class="burger__buttons-link">Forum</a></li>
+								</ul>
+
+								<ul class="burger__socials">
+									<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+									<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+									<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<div class="header__content nav-add-padding">
+				<div class="container">
+					<h1 class="header__content-title">FORROOM</h1>
+					<p class="header__content-text">Ремонтно-строительная компания</p>
+					<p class="header__content-slogan">FOR <span>ROOM,</span> FOR <span>LIFE,</span> FOR <span>YOU</span></p>
+				</div>
+			</div>
+		</header>
+
+		<!-- About -->
+
+		<section class="about">
+			<div class="container">
+				<div class="about__body">
+					<div class="about__content">
+						<h2 class="about__content-title">FORROOM</h2>
+						<p class="about__content-text">Forroom — это прогрессивная строительная компания, которая специализируется на комплексных ремонтах и строительстве частных домов, а также одновременно является тематическим форумом, где Вы можете задать все интересующие Вас вопросы.</p>
+					</div>
+					<div class="about__slider">
+						<div class="about__slider-wrap swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image: url('img/home/about-slider/1.jpg');"></div>
+								<div class="swiper-slide" style="background-image: url('img/home/about-slider/2.jpg');"></div>
+								<div class="swiper-slide" style="background-image: url('img/home/about-slider/3.jpg');"></div>
+							</div>
+						</div>
+					</div>
+					<div class="about__quote anim-item">
+						<div class="about__quote-wrap">
+							<div class="about__quote-body">
+								<blockquote class="about__quote-text">
+									<p>«Архитектура — тоже летопись мира: она говорит тогда, когда уже молчат и песни, и предания».</p>
+								</blockquote>
+								<p class="about__quote-author">Николай Васильевич Гоголь</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info ForRoom -->
+
+		<section class="info info_forroom">
+			<div class="info__container container">
+				<div class="info__body">
+					<div class="info__image">
+						<div class="info__image-wrap" style="background-image: url('img/home/info/1.jpg');"></div>
+					</div>
+
+					<div class="info__content">
+						<div class="info__content-logo">
+							<img src="img/forroom-black.png" alt="ForRoom">
+						</div>
+						<h4 class="info__content-title anim-item">Комплексный ремонт квартир и домов</h4>
+						<p class="info__content-text">For Room — структурное подразделение, которое специализируется на выполнении ремонтных работ в жилых и коммерческих помещениях любой сложности. Мы разработали  уникальные пакетные предложения, которые включают в себя дизайнерский ремонт со всеми необходимыми материалами, мебелью и бытовой техникой. Готовый пакет ремонта, выбранный Вами, будет с фиксированной ценой и точными сроками исполнения.</p>
+						<div class="info__content-btn">
+							<a href="#" class="btn btn_transform">ПЕРЕЙТИ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info ForHouse -->
+
+		<section class="info info_reverse info_forhouse">
+			<div class="info__container container">
+				<div class="info__body">
+					<div class="info__image">
+						<div class="info__image-wrap" style="background-image: url('img/home/info/2.jpg');"></div>
+					</div>
+
+					<div class="info__content">
+						<div class="info__content-logo">
+							<img src="img/forhouse-white.png" alt="ForHouse">
+						</div>
+						<h4 class="info__content-title anim-item">Строительство и реконструкция домов</h4>
+						<p class="info__content-text">For House — новая команда опытных специалистов в сфере коттеджного строительства. Использование современных технологий и материалов, а также диджитализация управления производственного процесса, являются основополагающими принципами в нашей работе и позволяют экономить ресурсы, обеспечивая оптимальные цены для наших заказчиков.</p>
+						<div class="info__content-btn">
+							<a href="#" class="btn btn_transform">ПЕРЕЙТИ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info Forum -->
+
+		<section class="info info_forum">
+			<div class="info__container container">
+				<div class="info__body">
+					<div class="info__image">
+						<div class="info__image-wrap" style="background-image: url('img/home/info/3.jpg');"></div>
+					</div>
+
+					<div class="info__content">
+						<div class="info__content-logo">
+							<img src="img/forum.png" alt="Forum">
+						</div>
+						<h4 class="info__content-title anim-item">Тематический форум</h4>
+						<p class="info__content-text">Здесь Вы можете узнать много нового о строительстве и ремонте, а также задать все интересующие Вас вопросы нашим специалистам.</p>
+						<div class="info__content-btn">
+							<a href="#" class="btn btn_transform">ПЕРЕЙТИ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Consultation -->
+
+		<section class="consultation">
+			<div class="container">
+				<div class="consultation__body">
+					<div class="consultation__content">
+						<p class="consultation__content-subtitle">Нужны рекомендации по ремонту или строительству?</p>
+						<h3 class="consultation__content-title">Заказать бесплатную консультацию</h3>
+						<div data-open-popup="call-popup" class="btn">Заказать Звонок</div>
+					</div>
+
+					<div class="consultation__image">
+						<div class="consultation__image-image" style="background-image: url('img/home/consultation.jpg');"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<div class="footer__logo-img">
+								<img src="img/logo-white.png" alt="ForRoom">
+							</div>
+							<p class="footer__logo-text">Ремонтно-строительная компания</p>
+						</div>
+						<div class="footer__info-info">
+							<div class="footer__time">
+								<p class="footer__time-text">ВРЕМЯ РАБОТЫ:</p>
+								<p class="footer__time-time">Пн-Пт с 10:00 до 18:00</p>
+							</div>
+							<div class="footer__address">
+								<p class="footer__address-text">АДРЕС: <span>Одесса, ул. Толбухина 135 ТЦ Мегадом, павильон № 129</span></p>
+							</div>
+						</div>
+						<div class="footer__info-contacts">
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+							<a href="tel:+380487955575" class="footer__phone">+38(048)795-55-75</a>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<p class="footer__copyright">COMPANY FORROOM 2021 © ALL RIGHTS RESERVED</p>
+						<a href="#" class="footer__creator">CREATED BY IDEA-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/home.js"></script>
+</body>
+</html>
+
+<!-- Openable -->
+
+<!-- <div class="recalls__openable openable">
+	<div class="openable__content" data-start-height="2, .recalls__cart, null, .recalls__carts">
+		<div class="recalls__carts">
+			<div class="recalls__cart">
+				<div class="recalls__cart-wrap">
+					<div class="recalls__cart-img">
+						<img src="img/recalls/acura.png" alt="acura">
+					</div>
+
+					<a href="#" class="recalls__cart-name">Acura</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="openable__btn">
+		<p>View All +</p>
+	</div>
+</div> -->
+
+<!-- Tabs -->
+
+<!-- <div class="header__tabs">
+	<div class="header__tabs-btns">
+		<div class="header__tabs-btn">Find Car</div>
+		<div class="header__tabs-btn">Vin Lookup</div>
+	</div>
+
+	<div class="header__tabs-tabs">
+		<div class="header__tabs-tab">
+
+		</div>
+	</div>
+</div> -->
+
+<!-- Container -->
+
+<!-- <section class="section">
+	<div class="section__content">
+		<div class="container">
+			<div class="section__body">
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="section__image">
+		<img src="img/" alt="" title="">
+	</div>
+</section> -->
+
+<!-- Burger -->
+
+<!-- <div class="burger" id="elem-burger">
+	<div class="burger__btn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="burger__bg"></div>
+
+	<div class="burger__menu">
+		<div class="burger__nav">
+			<div class="burger__close-btn"></div>
+		</div>
+
+		<ul class="burger__list">
+			<li><a href="#" title="Home" class="burger__link">Home</a></li>
+			<li><span class="burger__link" data-to="">Home</span></li>
+		</ul>
+	</div>
+</div> -->
+
+<!-- Open Menu -->
+
+<!-- <ul class="menu">
+	<li>
+		<span class="menu__link">Resources</span>
+		<span class="menu__arrow">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu__icon" fill="#fff" width="22px" height="22px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+		</span>
+		<div class="menu__sub-wrap">
+			<ul class="menu__sub-menu">
+				<li><span title="Price" class="menu__sub-link">Price</span></li>
+				<li><span title="Partners" class="menu__sub-link">Partners</span></li>
+			</ul>
+		</div>
+	</li>
+</ul> -->
+
+<!-- Select -->
+
+<!-- <div class="select elem-select" id="elem-select"> data-select-disable="true" data-select-size="2" data-select-autofocus="true" data-select-required="true"
+	<div class="select__title elem-select__title">
+		<p class="select__text elem-select__text">Text: </p>
+		<p class="select__value elem-select__value">Value</p>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="select__icon elem-select__icon" fill="#fff" width="22px" height="22px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+	</div>
+
+	<div class="select__list elem-select__list">
+		<input type="checkbox" class="select__input" id="elem-1">
+		<label for="elem-1" class="select__label elem-select__label">Value 1</label>
+		<input type="checkbox" class="select__input" id="elem-2">
+		<label for="elem-2" class="select__label elem-select__label">Value 2</label>
+		<input type="checkbox" class="select__input" id="elem-3">
+		<label for="elem-3" class="select__label elem-select__label">Value 3</label>
+	</div>
+</div> -->
+
+<!-- Drop Tab -->
+
+<!-- <div class="drop-tab" id="elem-range">
+	<div class="drop-tab__nav elem__nav">
+		<p class="drop-tab__value elem__value">Text</p>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="drop-tab__icon elem__icon" fill="#000" width="32px" height="32px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+	</div>
+
+	<div class="drop-tab__content elem__content">
+
+	</div>
+</div> -->
+
+<!-- Popup -->
+
+<!-- <p class="popup-btn" data-to-popup="elem-popup">Text</p>
+
+<div id="elem-popup" class="elem-popup popup">
+	<div class="elem-popup__body popup__body">
+		<div class="elem-popup__close popup__close">
+			<p>Close</p>
+		</div>
+		<input type="text" class="elem-popup__input" placeholder="Name">
+		<input type="password" class="elem-popup__input" placeholder="Password">
+		<button type="submit" class="elem-popup__input">Join</button>
+	</div>
+</div> -->
+
+<!-- Form -->
+
+<!-- <form action="#" id="form" class="form__body">
+	<h1 class="form__title">Отправка данных на почту</h1>
+	<div class="form__item">
+		<label for="formName" class="form__label">Имя*:</label>
+		<input type="text" id="formName" class="form__input _req" name="name">
+	</div>
+
+	<div class="form__item">
+		<label for="formPassword" class="form__label">Пароль*:</label>
+		<input type="text" id="formPassword" class="form__input _req _password" name="password">
+	</div>
+
+	<div class="form__item">
+		<label for="formPhone" class="form__label">Phone*:</label>
+		<input type="tel" id="formPhone" class="form__input _req _phone" name="phone">
+	</div>
+
+	<div class="form__item">
+		<label for="formEmail" class="form__label">E-mail*:</label>
+		<input type="email" id="formEmail" class="form__input _req _email" name="email">
+	</div>
+
+	<div class="form__item">
+		<div class="form__label">Левша или правша?</div>
+		<div class="options">
+			<div class="options__item">
+				<input id="formRightHanded" checked type="radio" value="Right" name="hand" class="options__input">
+				<label for="formRightHanded" class="options__label">Правша</label>
+			</div>
+			<div class="options__item">
+				<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input">
+				<label for="formLeftHanded" class="options__label">Левша</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="form__item">
+		<label for="formMessage" class="form__label">Сообщение:</label>
+		<textarea name="message" id="formMessage" class="form __input"></textarea>
+	</div>
+
+	<div class="form__item">
+		<div class="form__label">Возраст:</div>
+		<select name="age" class="select">
+			<option value="от 18 до 25" selected>Молодой</option>
+			<option value="от 25 до 45">Старый</option>
+			<option value="от 45">Супер стар</option>
+		</select>
+	</div>
+
+	<div class="form__item">
+		<div class="form__label">Прикрепить фото</div>
+		<div class="file">
+			<div class="file__item">
+				<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+				<div class="file__button">Выбрать</div>
+			</div>
+			<div id="formPreview" class="file__preview"></div>
+		</div>
+	</div>
+
+	<div class="form__item">
+		<div class="checkbox">
+			<input id="formAgreement" checked type="checkbox" name="agreement" class="_req checkbox__input">
+			<label for="formAgreement" class="checkbox__label">Я согласен</label>
+		</div>
+	</div>
+
+	<button class="form__button" type="submit">Отправить</button>
+</form> -->
