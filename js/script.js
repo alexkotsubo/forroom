@@ -190,3 +190,25 @@ if (animItems.length > 0) {
 	window.addEventListener('scroll', animItemsFunc);
 	setTimeout(animItemsFunc, 300);
 }
+
+/* Text */
+
+const textBody = document.querySelector('.text__body');
+const textBtns = document.querySelectorAll('.text__btns-btn');
+const textStartHeight = '60px';
+
+textBody.style.height = textStartHeight;
+
+textBtns[0].addEventListener('click', e => {
+	textBtns[0].classList.remove('active');
+	textBtns[1].classList.add('active');
+	textBody.style.height = document.querySelector('.text__body-wrap').offsetHeight + 'px';
+});
+
+textBtns[1].addEventListener('click', e => {
+	textBody.style.height = textStartHeight;
+	textBtns[1].classList.remove('active');
+	textBtns[0].classList.add('active');
+});
+
+// TODO 2 things
