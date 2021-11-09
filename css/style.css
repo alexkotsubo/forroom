@@ -757,7 +757,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-size: 17px;
   font-weight: 700;
-  color: #B1403D;
+  color: #fff;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -773,7 +773,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__time-time {
   white-space: nowrap;
-  color: #B1403D;
+  color: #fff;
 }
 .footer__address {
   display: flex;
@@ -786,7 +786,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 .footer__address-text span {
-  color: #B1403D;
   font-weight: 400;
   text-transform: none;
 }
@@ -827,7 +826,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #B1403D;
+  color: #898989;
   font-size: 14px;
 }
 .footer__copyright {

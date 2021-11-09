@@ -9,12 +9,12 @@ window.addEventListener('DOMContentLoaded', e => {
 	let i = 0;
 	const setActive = i => {
 		headerImages[i].classList.add('active');
-		headerImages[i].style.opacity = '.8';
+		headerImages[i].style.opacity = '.6';
 		setTimeout(() => {
 			headerImages[i].style.opacity = '1';
 		}, step);
 		setTimeout(() => {
-			headerImages[i].style.opacity = '.8';
+			headerImages[i].style.opacity = '.6';
 		}, seconds - step);
 	};
 	const unsetActive = i => {
