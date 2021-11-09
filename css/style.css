@@ -257,6 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .burger__menu {
+  transition: transform 1.2s;
   visibility: hidden;
   transform: translateX(100%);
   max-width: 420px;
@@ -271,7 +272,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  transition: 1.2s;
 }
 .burger__menu-wrap {
   padding: 0 40px 40px;
@@ -409,8 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Popup */
 .popup {
-  transition: 1.5s;
-  transition-delay: 1.5s;
+  transition: opacity 1.5s 1.5s;
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -610,8 +609,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 370px;
   padding: 55px 20px 35px;
   background: linear-gradient(270deg, #000 0%, #B15051 100%);
-  transition-duration: 0.8s;
-  transition-delay: 1.5s;
+  transition: transform 0.8s 1.5s;
   transform: translate(100%, 0);
   margin-left: auto;
 }
