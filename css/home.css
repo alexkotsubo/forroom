@@ -396,6 +396,130 @@
   height: 100%;
 }
 
+/* Footer */
+.footer {
+  padding: 18px 0 13px;
+  background: transparent linear-gradient(170deg, #7E7E7E 0%, #1A1A1A 100%);
+}
+.footer__body {
+  padding: 0 15px;
+}
+.footer__info {
+  display: flex;
+  align-items: center;
+}
+.footer__info-info {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.footer__info-contacts {
+  margin-right: 20px;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+.footer__logo-img {
+  margin: 0 30px 0 20px;
+  min-width: 110px;
+  max-width: 110px;
+}
+.footer__logo-img img {
+  max-width: 100%;
+}
+.footer__logo-text {
+  min-width: 270px;
+  width: 100%;
+  margin: 0 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.footer__time {
+  margin-right: 60px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+.footer__time-text {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer__time-time {
+  white-space: nowrap;
+  color: #fff;
+}
+.footer__address {
+  display: flex;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.footer__address-text {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer__address-text span {
+  font-weight: 400;
+  text-transform: none;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  margin-left: 40px;
+}
+.footer__socials li {
+  margin-right: 30px;
+}
+.footer__socials li:last-child {
+  margin-right: 0;
+}
+.footer__socials li a {
+  transition: 0.3s;
+}
+.footer__socials li a i {
+  font-size: 21px;
+  color: #fff;
+  transition: 0.3s;
+}
+.footer__socials li a:hover i {
+  transform: scale(1.1);
+  color: #B1403D;
+}
+.footer__phone {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+.footer__phone:hover {
+  color: #B1403D;
+}
+.footer__bottom {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #898989;
+  font-size: 14px;
+}
+.footer__copyright {
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+.footer__creator {
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.footer__creator:hover {
+  color: #f00;
+}
+
 /* Media */
 @media (max-width: 1400px) {
   /* About */

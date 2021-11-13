@@ -24,6 +24,7 @@ addBurger(document.querySelector('#nav-burger'));
 function addBurger(elem) {
 	const button = document.querySelector('#' + elem.id + ' .burger__btn');
 	const links = document.querySelectorAll('#' + elem.id + ' .burger__link');
+	const menu = document.querySelector('#' + elem.id + ' .burger__menu');
 	const bgElem = document.querySelector('#' + elem.id + ' .burger__bg');
 	let burgerClose;
 
@@ -32,6 +33,10 @@ function addBurger(elem) {
 		burgerClose.addEventListener('click', function(e) {
 			elem.classList.remove('active');
 			burgBodyUnLock();
+			menu.classList.add('keep-property');
+			setTimeout(() => {
+				menu.classList.remove('keep-property');
+			}, 1200);
 		});
 
 		elem.classList.remove('active');
@@ -44,10 +49,7 @@ function addBurger(elem) {
 				closePopup(popupActive, false);
 			}
 
-			if (elem.classList.contains('active') && variation === 2) {
-				elem.classList.remove('active');
-				burgBodyUnLock();
-			} else {
+			if (!elem.classList.contains('active')) {
 				elem.classList.add('active');
 				burgBodyLock();
 			}
@@ -64,6 +66,10 @@ function addBurger(elem) {
 			if ((!e.target.closest('.burger') && elem.classList.contains('active')) || (e.target.closest('.' + bgElem.classList) && elem.classList.contains('active'))) {
 				elem.classList.remove('active');
 				burgBodyUnLock();
+				menu.classList.add('keep-property');
+				setTimeout(() => {
+					menu.classList.remove('keep-property');
+				}, 1200);
 			}
 		});
 	}
@@ -99,7 +105,13 @@ function burgBodyUnLock() {
 /* Navigation */
 
 const navAddPadding = document.querySelector('#header .nav-add-padding');
-if (navAddPadding) navAddPadding.style.paddingTop = `${nav.offsetHeight}px`;
+
+if (navAddPadding) {
+	navAddPadding.style.paddingTop = `${nav.offsetHeight}px`;
+	window.addEventListener('resize', e => {
+		navAddPadding.style.paddingTop = `${nav.offsetHeight}px`;
+	});
+}
 
 /* Popup */
 
@@ -193,22 +205,36 @@ if (animItems.length > 0) {
 
 /* Text */
 
-const textBody = document.querySelector('.text__body');
-const textBtns = document.querySelectorAll('.text__btns-btn');
-const textStartHeight = '60px';
+if (document.querySelector('.text')) {
+	const textBody = document.querySelector('.text__body');
+	const textBtns = document.querySelectorAll('.text__btns-btn');
+	const textStartHeight = '60px';
 
-textBody.style.height = textStartHeight;
-
-textBtns[0].addEventListener('click', e => {
-	textBtns[0].classList.remove('active');
-	textBtns[1].classList.add('active');
-	textBody.style.height = document.querySelector('.text__body-wrap').offsetHeight + 'px';
-});
-
-textBtns[1].addEventListener('click', e => {
 	textBody.style.height = textStartHeight;
-	textBtns[1].classList.remove('active');
-	textBtns[0].classList.add('active');
-});
 
-// TODO 2 things
+	textBtns[0].addEventListener('click', e => {
+		textBtns[0].classList.remove('active');
+		textBtns[1].classList.add('active');
+		textBody.style.height = document.querySelector('.text__body-wrap').offsetHeight + 'px';
+	});
+
+	textBtns[1].addEventListener('click', e => {
+		textBody.style.height = textStartHeight;
+		textBtns[1].classList.remove('active');
+		textBtns[0].classList.add('active');
+	});
+}
+
+// TODO 2 things - size? 
+
+/* Dropdown */
+
+const dropdown = document.querySelector('.dropdown');
+
+if (dropdown) {
+	const dropdownBtn = document.querySelector('.dropdown__btn');
+	
+	dropdownBtn.addEventListener('click', e => {
+		dropdown.classList.toggle('active');
+	});
+}

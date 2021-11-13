@@ -43,17 +43,19 @@ window.addEventListener('DOMContentLoaded', e => {
 
 /* Header Text Effect */
 
-const headerTitle = document.querySelector('.header__content-title');
-const headerTitleHTML = headerTitle.innerHTML;
-let headerTitleStep = 0;
+if (headerTitle) {
+	const headerTitle = document.querySelector('.header__content-title');
+	const headerTitleHTML = headerTitle.innerHTML;
+	let headerTitleStep = 0;
 
-headerTitle.innerHTML = '';
-for (let i = 0; i < headerTitleHTML.length; i++) {
-	const element = document.createElement('span');
-	element.innerHTML = headerTitleHTML[i];
-	headerTitle.appendChild(element);
-	headerTitleStep += 50;
-	element.style.animationDelay = headerTitleStep / 1000 + 's';
+	headerTitle.innerHTML = '';
+	for (let i = 0; i < headerTitleHTML.length; i++) {
+		const element = document.createElement('span');
+		element.innerHTML = headerTitleHTML[i];
+		headerTitle.appendChild(element);
+		headerTitleStep += 50;
+		element.style.animationDelay = headerTitleStep / 1000 + 's';
+	}
 }
 
 /* About Slider */
@@ -63,13 +65,4 @@ const aboutSlider = new Swiper('.about__slider-wrap', {
 	spaceBetween: 10,
 	speed: 600,
 	autoplay: { delay: 5000 },
-});
-
-/* Dropdown */
-
-const dropdownBtn = document.querySelector('.dropdown__btn');
-const dropdown = document.querySelector('.dropdown');
-
-dropdownBtn.addEventListener('click', e => {
-	dropdown.classList.toggle('active');
 });

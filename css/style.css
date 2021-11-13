@@ -257,8 +257,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .burger__menu {
-  transition: 1.2s;
+  transition: transform 1.2s;
   visibility: hidden;
+  opacity: 0;
   transform: translateX(100%);
   max-width: 420px;
   width: 100%;
@@ -266,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   right: 0;
-  background: transparent linear-gradient(rgba(0, 0, 0, 0) 0%, #B1403D 68%);
+  background: transparent linear-gradient(transparent 0%, #B1403D 68%);
   z-index: 51;
   overflow-y: auto;
   overflow-x: hidden;
@@ -276,6 +277,10 @@ h1, h2, h3, h4, h5, h6 {
 .burger__menu-wrap {
   padding: 0 40px 40px;
   margin: auto 0;
+}
+.burger__menu.keep-property {
+  visibility: visible;
+  opacity: 1;
 }
 
 .burger__close-btn {
@@ -334,6 +339,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   color: #fff;
   font-size: 28px;
+  text-transform: capitalize;
 }
 .burger__link:hover {
   color: #FF0700;
@@ -342,6 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 .burger.active .burger__menu {
   transform: translateX(0%);
   visibility: visible;
+  opacity: 1;
 }
 
 .burger.active .burger__bg {
@@ -685,8 +692,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 .nav__phone {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   flex: 0 1 20%;
   padding-left: 20px;
 }
@@ -716,6 +722,36 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   flex: 0 1 20%;
   padding-right: 20px;
+}
+.nav__home {
+  text-align: center;
+  flex: 0 1 7%;
+  padding-left: 20px;
+}
+.nav__home:hover i {
+  color: #B1403D;
+}
+.nav__home i {
+  font-size: 29px;
+  transition: 0.3s;
+  color: #fff;
+}
+.nav_small {
+  background: rgba(57, 57, 57, 0.5);
+  padding: 8px 0 5px;
+}
+.nav_small .burger {
+  flex: 0 1 7%;
+  padding-right: 20px;
+}
+.nav_small .burger__btn {
+  height: 8px;
+}
+.nav_small .burger__btn:hover {
+  transform: translate(0, 0);
+}
+.nav_small .nav__logo-link {
+  max-width: 210px;
 }
 
 /* Text */
@@ -785,130 +821,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .text__btns-btn:hover {
   background: #C1605F;
-}
-
-/* Footer */
-.footer {
-  padding: 18px 0 13px;
-  background: transparent linear-gradient(170deg, #7E7E7E 0%, #1A1A1A 100%);
-}
-.footer__body {
-  padding: 0 15px;
-}
-.footer__info {
-  display: flex;
-  align-items: center;
-}
-.footer__info-info {
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-}
-.footer__info-contacts {
-  margin-right: 20px;
-}
-.footer__logo {
-  display: flex;
-  align-items: center;
-}
-.footer__logo-img {
-  margin: 0 30px 0 20px;
-  min-width: 110px;
-  max-width: 110px;
-}
-.footer__logo-img img {
-  max-width: 100%;
-}
-.footer__logo-text {
-  min-width: 270px;
-  width: 100%;
-  margin: 0 20px;
-  text-align: center;
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1;
-}
-.footer__time {
-  margin-right: 60px;
-  line-height: 1.8;
-  font-size: 17px;
-}
-.footer__time-text {
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-}
-.footer__time-time {
-  white-space: nowrap;
-  color: #fff;
-}
-.footer__address {
-  display: flex;
-  font-size: 15px;
-  line-height: 1.8;
-}
-.footer__address-text {
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-}
-.footer__address-text span {
-  font-weight: 400;
-  text-transform: none;
-}
-.footer__socials {
-  display: flex;
-  align-items: center;
-  margin-bottom: 13px;
-  margin-left: 40px;
-}
-.footer__socials li {
-  margin-right: 30px;
-}
-.footer__socials li:last-child {
-  margin-right: 0;
-}
-.footer__socials li a {
-  transition: 0.3s;
-}
-.footer__socials li a i {
-  font-size: 21px;
-  color: #fff;
-  transition: 0.3s;
-}
-.footer__socials li a:hover i {
-  transform: scale(1.1);
-  color: #B1403D;
-}
-.footer__phone {
-  white-space: nowrap;
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
-}
-.footer__phone:hover {
-  color: #B1403D;
-}
-.footer__bottom {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #898989;
-  font-size: 14px;
-}
-.footer__copyright {
-  text-transform: uppercase;
-  margin-right: 30px;
-}
-.footer__creator {
-  text-transform: uppercase;
-  transition: 0.2s;
-}
-.footer__creator:hover {
-  color: #f00;
 }
 
 /* Fonts */
