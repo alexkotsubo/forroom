@@ -1,3 +1,12 @@
+/* Nav */
+.nav .burger__link {
+  font-size: 21px;
+  font-weight: 300;
+}
+.nav .burger__link.active {
+  color: #b1403d;
+}
+
 /* Header */
 .header {
   overflow: hidden;
@@ -56,7 +65,7 @@
   margin-bottom: 70px;
   transition: 0.3s;
   overflow: hidden;
-  color: #B1403D;
+  color: #b1403d;
   line-height: 1.2;
   font-size: 42px;
   font-weight: 600;
@@ -136,7 +145,7 @@
   margin-top: 25px;
   display: flex;
   padding-left: 20px;
-  border-left: 2px solid #B15051;
+  border-left: 2px solid #b15051;
 }
 .about__quote-text p {
   line-height: 1.8;
@@ -221,7 +230,7 @@
   margin-top: 10px;
   font-size: 40px;
   font-weight: 700;
-  color: #B1403D;
+  color: #b1403d;
 }
 .packages__cart-list {
   margin-top: 80px;
@@ -461,12 +470,17 @@
   padding: 0.25em 0.75em;
   display: inline-block;
   color: #fff;
-  background: #B15051;
+  background: #b15051;
   position: absolute;
   top: 5px;
   z-index: 5;
   white-space: nowrap;
   line-height: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .compare__cart {
   flex: 0 1 50%;
@@ -682,7 +696,7 @@
   position: relative;
   flex: 0 1 25%;
   padding-bottom: 18%;
-  border: 3px solid #B1403D;
+  border: 3px solid #b1403d;
 }
 .footer__photo:hover .footer__photo-title {
   transform: translate(0, 0);
@@ -823,7 +837,7 @@
   line-height: 1.8;
   font-size: 15px;
   font-weight: 600;
-  color: #B1403D;
+  color: #b1403d;
 }
 .footer__bottom {
   display: flex;

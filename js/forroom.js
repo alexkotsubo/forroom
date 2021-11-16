@@ -1,5 +1,34 @@
 'use strict';
 
+/* Header Text Change */
+
+const headerExamples = document.querySelectorAll('.header__texts-examples span');
+const headerText = document.querySelector('.header__texts-text');
+const headerTextSpan = document.querySelector('.header__texts-text span');
+
+headerTextSpan.innerHTML = headerExamples[0].innerHTML;
+
+window.onload = e => {
+	let headerTextIndex = 0;
+
+	const setActive = i => {
+		headerTextSpan.innerHTML = headerExamples[i].innerHTML;
+		headerText.style.width = headerExamples[i].offsetWidth + 11 + 'px';
+		setTimeout(() => {
+			headerText.style.width = '0px';
+		}, 2000);
+	};
+
+	setActive(headerTextIndex);
+	headerTextIndex += 1;
+
+	setInterval(() => {
+		if (headerTextIndex === headerExamples.length) headerTextIndex = 0;
+		setActive(headerTextIndex);
+		headerTextIndex += 1;
+	}, 2500);
+};
+
 /* Header Slider */
 
 window.addEventListener('DOMContentLoaded', e => {
@@ -47,146 +76,72 @@ const packagesCart = document.querySelectorAll('.packages__cart');
 const packagesCartWrap = document.querySelectorAll('.packages__cart-wrap');
 const packagesCarts = document.querySelector('.packages__carts');
 
-packagesCart[0].classList.add('active');
+if (packagesCarts) {
+	packagesCart[0].classList.add('active');
 
-window.addEventListener('DOMContentLoaded', e => {
-	let setCartHeight = () => {};
+	window.addEventListener('DOMContentLoaded', e => {
+		let setCartHeight = () => {};
 
-	const startPackagesCarts = e => {
-		if (document.documentElement.clientWidth < 768) {
-			for (let i = 0; i < packagesCart.length; i++) {
+		const startPackagesCarts = e => {
+			if (document.documentElement.clientWidth < 768) {
+				for (let i = 0; i < packagesCart.length; i++) {
+					if (i !== 0) {
+						packagesCart[i].style.height = '125px';
+					} else {
+						packagesCart[i].style.height = packagesCartWrap[i].offsetHeight + 2 + 'px';
+					}
+				}
+				setCartHeight = i => {
+					packagesCart[i].onmouseenter = e => {
+						if (i !== 0) {
+							packagesCart[0].classList.remove('active');
+							packagesCart[0].style.height = '125px';
+						} else {
+							return;
+						}
+						packagesCart[i].style.height = packagesCartWrap[i].offsetHeight + 2 + 'px';
+						packagesCart[i].classList.add('active');
+					};
+					packagesCart[i].onmouseleave = e => {
+						packagesCart[i].style.height = '125px';
+						packagesCart[i].classList.remove('active');
+						console.log(packagesCartWrap[i].offsetHeight)
+						packagesCart[0].style.height = packagesCartWrap[0].offsetHeight + 2 + 'px';
+						packagesCart[0].classList.add('active');
+					};
+				}
+			} else {
+				for (let i = 0; i < packagesCart.length; i++) {
+					packagesCart[i].style.height = 'unset';
+				}
+				setCartHeight = i => {
+					packagesCart[i].onmouseenter = e => {
+						if (i !== 0) {
+							packagesCart[0].classList.remove('active');
+						} else {
+							return;
+						}
+						packagesCart[i].classList.add('active');
+					};
+					packagesCart[i].onmouseleave = e => {
+						packagesCart[i].classList.remove('active');
+						packagesCart[0].classList.add('active');
+					};
+				}
+			}
+		};
+
+		startPackagesCarts();
+		window.addEventListener('resize', startPackagesCarts);
+		for (let i = 0; i < packagesCart.length; i++) {
+			if (document.documentElement.clientWidth < 768) {
 				if (i !== 0) {
 					packagesCart[i].style.height = '125px';
 				} else {
 					packagesCart[i].style.height = packagesCartWrap[i].offsetHeight + 2 + 'px';
 				}
 			}
-			setCartHeight = i => {
-				packagesCart[i].onmouseenter = e => {
-					if (i !== 0) {
-						packagesCart[0].classList.remove('active');
-						packagesCart[0].style.height = '125px';
-					} else {
-						return;
-					}
-					packagesCart[i].style.height = packagesCartWrap[i].offsetHeight + 2 + 'px';
-					packagesCart[i].classList.add('active');
-				};
-				packagesCart[i].onmouseleave = e => {
-					packagesCart[i].style.height = '125px';
-					packagesCart[i].classList.remove('active');
-					console.log(packagesCartWrap[i].offsetHeight)
-					packagesCart[0].style.height = packagesCartWrap[0].offsetHeight + 2 + 'px';
-					packagesCart[0].classList.add('active');
-				};
-			}
-		} else {
-			for (let i = 0; i < packagesCart.length; i++) {
-				packagesCart[i].style.height = 'unset';
-			}
-			setCartHeight = i => {
-				packagesCart[i].onmouseenter = e => {
-					if (i !== 0) {
-						packagesCart[0].classList.remove('active');
-					} else {
-						return;
-					}
-					packagesCart[i].classList.add('active');
-				};
-				packagesCart[i].onmouseleave = e => {
-					packagesCart[i].classList.remove('active');
-					packagesCart[0].classList.add('active');
-				};
-			}
+			setCartHeight(i);
 		}
-	};
-
-	startPackagesCarts();
-	window.addEventListener('resize', startPackagesCarts);
-	for (let i = 0; i < packagesCart.length; i++) {
-		if (document.documentElement.clientWidth < 768) {
-			if (i !== 0) {
-				packagesCart[i].style.height = '125px';
-			} else {
-				packagesCart[i].style.height = packagesCartWrap[i].offsetHeight + 2 + 'px';
-			}
-		}
-		setCartHeight(i);
-	}
-});
-
-/* Brands Slider */
-
-const brandsSlider = new Swiper('.brands__slider', {
-	loop: true,
-	slidesPerView: 3,
-	speed: 400,
-	autoplay: { delay: 5000 },
-	breakpoints: {
-		992: {
-			slidesPerView: 5,
-		},
-		768: {
-			slidesPerView: 4,
-		}
-	}
-});
-
-/* Tabs */
-
-const workTabs = document.querySelectorAll('.work__tab');
-const workBtnsBtn = document.querySelectorAll('.work__btns-btn');
-
-if (workTabs.length === workBtnsBtn.length) {
-	let prevTab = 0;
-
-	workTabs[0].classList.add('active');
-	workBtnsBtn[0].classList.add('active');
-
-	for (let i = 0; i < workBtnsBtn.length; i++) {
-		workBtnsBtn[i].addEventListener('click', e => {
-			if (prevTab !== null) {
-				workTabs[prevTab].classList.remove('active');
-				workBtnsBtn[prevTab].classList.remove('active');
-			}
-			workTabs[i].classList.add('active');
-			workBtnsBtn[i].classList.add('active');
-			prevTab = i;
-		});
-	}
-}
-
-/* Compare Slider */
-
-const compareSliders = document.querySelectorAll('.compare-slider');
-
-if (compareSliders) {
-	for (let i = 0; i < compareSliders.length; i++) {
-		const compareSliderLeft = compareSliders[i].querySelector('.compare-slider__left');
-		const compareSliderControl = compareSliders[i].querySelector('.compare-slider__control');
-		const compareSliderWrap = compareSliders[i].querySelector('.compare-slider__wrap');
-		const startPosition = compareSliders[i].getAttribute('data-start-position');
-
-		compareSliderLeft.style.width = startPosition;
-		compareSliderControl.style.left = startPosition;
-
-		const moveSlider = e => {
-			let position = e.pageX - compareSliders[i].offsetLeft;
-			if (position > compareSliders[i].offsetWidth) position = compareSliders[i].offsetWidth;
-			compareSliderLeft.style.width = position / compareSliders[i].offsetWidth * 100 + '%';
-			compareSliderControl.style.left = position / compareSliders[i].offsetWidth * 100 + '%';
-		};
-
-		compareSliders[i].addEventListener('mousedown', e => {
-			compareSliders[i].classList.add('transition');
-			moveSlider(e);
-			compareSliders[i].onmousemove = e => {
-				compareSliders[i].classList.remove('transition');
-				moveSlider(e);
-			};
-		});
-		compareSliders[i].addEventListener('mouseup', e => {
-			compareSliders[i].onmousemove = () => {};
-		});
-	}
+	});
 }

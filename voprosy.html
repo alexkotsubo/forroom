@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="css/dticon.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/forpages.css">
+	<link rel="stylesheet" href="css/voprosy.css">
+	<link rel="stylesheet" href="css/main-footer.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</a>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Price Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header" id="header" style="background-image: url('img/forum.jpg');">
+			<div class="header__wrap">
+				<!-- Nav -->
+
+				<nav class="nav fixed-padding" id="nav">
+					<div class="nav__body">
+						<a href="tel:+380487955575" class="nav__phone"><i aria-hidden="true" class="fas fa-phone"></i></a>
+						<div class="nav__logo">
+							<a class="nav__logo-link" href="#"><img src="img/logo.png" alt="ForRoom"></a>
+						</div>
+						<div class="nav__burger burger" id="nav-burger">
+							<div class="burger__btn">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="burger__bg"></div>
+						
+							<div class="burger__menu">
+								<div class="burger__nav">
+									<div class="burger__close-btn"></div>
+								</div>
+
+								<div class="burger__menu-wrap">
+									<div class="burger__logo">
+										<a href="#" class="burger__logo-link">
+											<img src="img/logo.png" alt="ForRoom">
+										</a>
+									</div>
+
+									<ul class="burger__list">
+										<li><a href="#" class="burger__link">ForRoom</a></li>
+										<li><a href="#" class="burger__link">ForHouse</a></li>
+										<li><a href="#" class="burger__link">Форум</a></li>
+									</ul>
+
+									<ul class="burger__buttons">
+										<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+										<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+										<li><a href="#" class="burger__buttons-link">Forum</a></li>
+									</ul>
+
+									<ul class="burger__socials">
+										<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="header__content nav-add-padding">
+					<div class="container">
+						<h1 class="header__content-title">Вопросы</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Questions -->
+
+		<section class="questions">
+			<div class="container">
+				<div class="questions__body">
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">У меня вторичное жилье. Я могу сделать ремонт по вашему пакету?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Стоимость пакетов рассчитана для новостроек, где есть уже входная дверь, стяжка, окна, стены, радиаторы. Но мы также делаем пакетный ремонт во «вторичке» и «старом фонде», таких обращений очень много. В этом случае добавится стоимость демонтажа существующей отделки: полы, стены, двери, сантехника, плитка.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Могу ли я делать ремонт поэтапно, например, сначала санузел, потом кухня, комната?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Нет, так как стоимость, сроки, технологический цикл рассчитаны на одновременную работу во всех помещениях.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Окна, откосы и подоконники входят в пакеты?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Установка подоконников и откосов входит, замена окон – не входит, но мы можем просчитать их дополнительно.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">У вас написана цена за м.кв., какие дополнительные расходы у меня могут возникнуть?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">В наших готовых пакетах уже включены все черновые работы и материалы, логистика, а также отделочные материалы и работы по их выполнению. Дополнительные расходы к стоимости пакетов могут возникнуть, если у вас:</p>
+								<ul class="forum-tab__list">
+									<li>потолки более 3,1 м</li>
+									<li>квартира по площади меньше 40 м2</li>
+									<li>требуется ручной подъем материалов на этаж без лифта</li>
+									<li>вторичное жилье и требуется демонтаж существующей отделки.</li>
+								</ul>
+								<p class="forum-tab__text">Полный список условий – в договоре, который подписывается перед началом работ.</p>
+								<p class="forum-tab__text">Также вы можете прийти к нам по адресу пл. Толбухина, 135 (ТЦ Мегадом), 3 этаж. 129 павильон и получить экспертную консультацию по конкретно вашему объекту.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Что если у меня уже есть дизайн-проект?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Дизайн-проект в виде рабочих чертежей идёт в подарок ко всем нашим пакетам. Если вы уже ранее где-то заказали дизайн-проект, мы смотрим какие там виды работ, и, если он укладывается в какой-то из наших пакетов (базовый, оптимальный, максимальный), то мы без проблем работаем по нему. Если проект выходит за рамки пакета, в этом случае мы просчитываем вам отделочные работы в рамках пакета индивидуальный.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">У меня квартира 38 кв.м., возьмётесь? И сколько будет стоить мой ремонт?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Для квартир площадью 30-40 кв.м. действует наценка 20%. В вашем случае выгоднее заключить договор по выбранному пакету на 40 кв.м.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Делаете ли вы перепланировку?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Да, делаем. Можем снести ненужные перегородки и установить их там, где это необходимо. Эти работы просчитываются дополнительно.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Замена батарей отопления входит в пакет?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Замена не входит.</p>
+								<p class="forum-tab__text">Замену батарей/радиаторов лучше поручить Управляющей компании застройщика, поскольку только УК имеет право вносить изменения в действующую систему отопления и несет за нее полную ответственность.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Я не хочу ванную. Можно ли вместо неё сделать душевую?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Да, можно. Вместо ванной мы делаем душевую с трапом, облицовываем плиткой. Это входит в стоимость пакетов. Калёное стекло оплачивается отдельно.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Есть ли у Вас гарантия на выполненные работы?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">Гарантия на все работы – 5 лет.</p>
+								<p class="forum-tab__text">Гарантия на материалы устанавливается фирмой-производителем.</p>
+								<p class="forum-tab__text">Если у Вас есть дополнительные вопросы по условиям и гарантийному обслуживанию квартиры после ремонта, свяжитесь с нами любым удобным Вам способом:</p>
+								<p class="forum-tab__text">Телефон: 048-795-55-75</p>
+								<p class="forum-tab__text">Email: sales@forroom.com.ua</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="forum-tab">
+						<div class="forum-tab__nav">
+							<p class="forum-tab__title">Потолок вы делаете только натяжной?</p>
+							<i class="fas fa-caret-right"></i>
+						</div>
+						<div class="forum-tab__content">
+							<div class="forum-tab__wrap">
+								<p class="forum-tab__text">В пакетах предусмотрен натяжной потолок, с возможностью сделать подшторник из гипсокартона по желанию клиента. Натяжной потолок – наиболее технологичный вариант потолка, который быстро монтируется и позволяет без дополнительных затрат прокладывать коммуникации в запотолочном пространстве: кабели, трубопроводы, трассы кондиционирования и т.д.</p>
+								<p class="forum-tab__text">За дополнительную плату возможно устройство потолка из ГКЛ, или комбинированного потолка.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ask -->
+
+		<section class="ask">
+			<div class="ask__body">
+				<h2 class="ask__title">ЗАДАТЬ ВОПРОС</h2>
+				<p class="ask__text">Задайте вопрос и получите консультацию эксперта</p>
+				<a href="#" class="ask__btn btn">Задать вопрос</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<div class="footer__logo-img">
+								<img src="img/logo-white.png" alt="ForRoom">
+							</div>
+							<p class="footer__logo-text">Ремонтно-строительная компания</p>
+						</div>
+						<div class="footer__info-info">
+							<div class="footer__time">
+								<p class="footer__time-text">ВРЕМЯ РАБОТЫ:</p>
+								<p class="footer__time-time">Пн-Пт с 10:00 до 18:00</p>
+							</div>
+							<div class="footer__address">
+								<p class="footer__address-text">АДРЕС: <span>Одесса, ул. Толбухина 135 ТЦ Мегадом, павильон № 129</span></p>
+							</div>
+						</div>
+						<div class="footer__info-contacts">
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+							<a href="tel:+380487955575" class="footer__phone">+38(048)795-55-75</a>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<p class="footer__copyright">COMPANY FORROOM 2021 © ALL RIGHTS RESERVED</p>
+						<a href="#" class="footer__creator">CREATED BY IDEA-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

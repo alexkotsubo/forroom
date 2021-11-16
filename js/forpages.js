@@ -1,125 +1,77 @@
 'use strict';
 
-/* Header Slider */
+/* Brands Slider */
 
-window.addEventListener('DOMContentLoaded', e => {
-	const headerImages = document.querySelectorAll('#header .header__images-image');
-	const seconds = 5.5 * 1000;
-	const step = 0.15 * 1000;
-	let i = 0;
-	const setActive = i => {
-		headerImages[i].classList.add('active');
-		headerImages[i].style.opacity = '.7';
-		setTimeout(() => {
-			headerImages[i].style.opacity = '1';
-		}, step);
-		setTimeout(() => {
-			headerImages[i].style.opacity = '.7';
-		}, seconds - step);
-	};
-	const unsetActive = i => {
-		setTimeout(() => {
-			headerImages[i].classList.remove('active');
-			headerImages[i].style.opacity = '0';
-		}, step);
-	};
-
-	setActive(i);
-	i += 1;
-
-	setInterval(() => {
-		if (i === headerImages.length) {
-			i = 1;
-			unsetActive(headerImages.length - 1);
-			setActive(0);
-			return;
-		}
-
-		if (i) unsetActive(i - 1);
-		setActive(i);
-		i += 1;
-	}, seconds);
-});
-
-/* Header Text Change */
-
-const headerExamples = document.querySelectorAll('.header__texts-examples span');
-const headerText = document.querySelector('.header__texts-text');
-const headerTextSpan = document.querySelector('.header__texts-text span');
-
-headerTextSpan.innerHTML = headerExamples[0].innerHTML;
-
-window.onload = e => {
-	let headerTextIndex = 0;
-
-	const setActive = i => {
-		headerTextSpan.innerHTML = headerExamples[i].innerHTML;
-		headerText.style.width = headerExamples[i].offsetWidth + 11 + 'px';
-		setTimeout(() => {
-			headerText.style.width = '0px';
-		}, 2000);
-	};
-
-	setActive(headerTextIndex);
-	headerTextIndex += 1;
-
-	setInterval(() => {
-		if (headerTextIndex === headerExamples.length) headerTextIndex = 0;
-		setActive(headerTextIndex);
-		headerTextIndex += 1;
-	}, 2500);
-};
-
-/* Forum Tabs */
-
-const forumTabs = document.querySelectorAll('.forum-tab');
-
-window.addEventListener('DOMContentLoaded', e => {
-	if (forumTabs) {
-		for (let i = 0; i < forumTabs.length; i++) {
-			const nav = forumTabs[i].querySelector('.forum-tab__nav');
-			const content = forumTabs[i].querySelector('.forum-tab__content');
-			const wrap = forumTabs[i].querySelector('.forum-tab__wrap');
-			let open = false;
-
-			content.style.height = '0px';
-
-			nav.addEventListener('click', e => {
-				forumTabs[i].classList.toggle('active');
-				console.log(wrap)
-				if (!open) {
-					content.style.height = wrap.offsetHeight + 'px';
-					open = true;
-					return;
-				}
-				content.style.height = '0px';
-				open = false;
-			});
+const brandsSlider = new Swiper('.brands__slider', {
+	loop: true,
+	slidesPerView: 3,
+	speed: 400,
+	autoplay: { delay: 5000 },
+	breakpoints: {
+		992: {
+			slidesPerView: 5,
+		},
+		768: {
+			slidesPerView: 4,
 		}
 	}
 });
 
-/* Forum Section Tabs */
+/* Tabs */
 
-const forumSectionTabs = document.querySelectorAll('.forum__tab');
+const workTabs = document.querySelectorAll('.work__tab');
+const workBtnsBtn = document.querySelectorAll('.work__btns-btn');
 
-window.addEventListener('DOMContentLoaded', e => {
-	if (forumSectionTabs) {
-		const forumSectionBtns = document.querySelectorAll('.forum__btns-btn');
-		let prevTab = 0;
-		for (let i = 0; i < forumSectionBtns.length; i++) {
-			forumSectionBtns[prevTab].classList.add('active');
-			forumSectionTabs[prevTab].classList.add('active');
+if (workTabs.length === workBtnsBtn.length) {
+	let prevTab = 0;
 
-			forumSectionBtns[i].addEventListener('click', e => {
-				if (prevTab !== null) {
-					forumSectionBtns[prevTab].classList.remove('active');
-					forumSectionTabs[prevTab].classList.remove('active');
-				}
-				forumSectionBtns[i].classList.add('active');
-				forumSectionTabs[i].classList.add('active');
-				prevTab = i;
-			});
-		}
+	workTabs[0].classList.add('active');
+	workBtnsBtn[0].classList.add('active');
+
+	for (let i = 0; i < workBtnsBtn.length; i++) {
+		workBtnsBtn[i].addEventListener('click', e => {
+			if (prevTab !== null) {
+				workTabs[prevTab].classList.remove('active');
+				workBtnsBtn[prevTab].classList.remove('active');
+			}
+			workTabs[i].classList.add('active');
+			workBtnsBtn[i].classList.add('active');
+			prevTab = i;
+		});
 	}
-});
+}
+
+/* Compare Slider */
+
+const compareSliders = document.querySelectorAll('.compare-slider');
+
+if (compareSliders) {
+	for (let i = 0; i < compareSliders.length; i++) {
+		const compareSliderLeft = compareSliders[i].querySelector('.compare-slider__left');
+		const compareSliderControl = compareSliders[i].querySelector('.compare-slider__control');
+		const compareSliderWrap = compareSliders[i].querySelector('.compare-slider__wrap');
+		const startPosition = compareSliders[i].getAttribute('data-start-position');
+
+		compareSliderLeft.style.width = startPosition;
+		compareSliderControl.style.left = startPosition;
+
+		const moveSlider = e => {
+			let position = e.pageX - compareSliders[i].offsetLeft;
+			if (position > compareSliders[i].offsetWidth) position = compareSliders[i].offsetWidth;
+			compareSliderLeft.style.width = position / compareSliders[i].offsetWidth * 100 + '%';
+			compareSliderControl.style.left = position / compareSliders[i].offsetWidth * 100 + '%';
+		};
+
+		compareSliders[i].addEventListener('mousedown', e => {
+			compareSliders[i].classList.add('transition');
+			moveSlider(e);
+			compareSliders[i].onmousemove = e => {
+				compareSliders[i].classList.remove('transition');
+				moveSlider(e);
+			};
+		});
+		compareSliders[i].addEventListener('mouseup', e => {
+			compareSliders[i].onmousemove = () => {};
+		});
+	}
+}
