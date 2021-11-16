@@ -37,12 +37,12 @@
 		<div class="dropdown">
 			<ul class="dropdown__content">
 				<li>
-					<a href="#" class="dropdown__content-link">
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
 						<p class="dropdown__content-name">Получить консультацию по строительству</p>
 						<div class="dropdown__content-icon">
 							<i class="fas fa-home"></i>
 						</div>
-					</a>
+					</div>
 				</li>
 				<li>
 					<div data-open-popup="call-popup" class="dropdown__content-link">
@@ -68,10 +68,44 @@
 			</div>
 		</div>
 
-		<!-- Price Popup -->
+		<!-- Call Popup -->
 
 		<div id="call-popup" class="call-popup popup">
-			<div class="call-popup__body popup__body">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
 				<div class="call-popup__close popup__close"></div>
 				<div class="call-popup__inner">
 					<form action="#" class="call-popup__form">

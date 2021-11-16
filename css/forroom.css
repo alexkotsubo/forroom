@@ -441,7 +441,9 @@
 
 /* Compare */
 .compare {
-  background: url("../img/forroom/compare.jpg") no-repeat center center/cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   background-attachment: fixed;
   color: #fff;
 }

@@ -603,7 +603,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Call Popup */
 .call-popup__body {
-  background: url("../img/call-popup.jpg") no-repeat center bottom/cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
 }
 .call-popup__inner {
   max-width: 370px;

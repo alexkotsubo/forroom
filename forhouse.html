@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ForHouse | Строительство и реконструкция частных домов под ключ</title>
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/lightgallery.min.css" /> 
 	<link rel="stylesheet" href="css/dticon.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -37,12 +38,12 @@
 		<div class="dropdown">
 			<ul class="dropdown__content">
 				<li>
-					<a href="#" class="dropdown__content-link">
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
 						<p class="dropdown__content-name">Получить консультацию по строительству</p>
 						<div class="dropdown__content-icon">
 							<i class="fas fa-home"></i>
 						</div>
-					</a>
+					</div>
 				</li>
 				<li>
 					<div data-open-popup="call-popup" class="dropdown__content-link">
@@ -68,10 +69,44 @@
 			</div>
 		</div>
 
-		<!-- Price Popup -->
+		<!-- Call Popup -->
 
 		<div id="call-popup" class="call-popup popup">
-			<div class="call-popup__body popup__body">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
 				<div class="call-popup__close popup__close"></div>
 				<div class="call-popup__inner">
 					<form action="#" class="call-popup__form">
@@ -172,7 +207,7 @@
 						</h2>
 						<h3 class="header__content-subtitle anim-item">частных домов под ключ</h3>
 						<p class="header__content-text anim-item">Полный комплекс услуг - от подбора участка до ввода объекта в эксплуатацию</p>
-						<a href="#" class="header__content-btn btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+						<div data-open-popup="call-popup-1" class="header__content-btn btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 					</div>
 				</div>
 			</div>
@@ -256,7 +291,7 @@
 				<div class="container">
 					<div class="gift__body">
 						<h5 class="gift__body-text">Доступное мастерство в руках наших специалистов!</h5>
-						<a href="#" class="btn_transform btn">Получить консультацию</a>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
 					</div>
 				</div>
 			</div>
@@ -313,7 +348,11 @@
 							</div>
 							<h5 class="advantages-carts__title">Поручительство</h5>
 							<p class="advantages-carts__text">Поручительство лидера рынка недвижимости за результаты работы</p>
-							<a href="#" class="btn advantages-carts__btn">Ознакомиться</a>
+							<div id="advantages-lightgallery">
+								<a href="img/IMAGE-2021-02-03-163051.jpg">
+									<div class="btn advantages-carts__btn">Ознакомиться</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -348,7 +387,7 @@
 				<div class="container">
 					<div class="gift__body">
 						<h5 class="gift__body-text">Наслаждение от процесса и удовольствие в результате!</h5>
-						<a href="#" class="btn_transform btn">Получить консультацию</a>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
 					</div>
 				</div>
 			</div>
@@ -429,7 +468,7 @@
 				<div class="container">
 					<div class="gift__body">
 						<h5 class="gift__body-text">Каждому заказчику — индивидуальный <span>подарок!</span></h5>
-						<a href="#" class="btn_transform btn">Получить консультацию</a>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
 					</div>
 				</div>
 			</div>
@@ -610,7 +649,7 @@
 				<div class="container">
 					<div class="gift__body">
 						<h5 class="gift__body-text">Реализуем проект наилучшим образом в полном соответствии с Вашими пожеланиями!</h5>
-						<a href="#" class="btn_transform btn">Получить консультацию</a>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
 					</div>
 				</div>
 			</div>
@@ -641,7 +680,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</h4>
 									<p class="work__tab-text">Бесплатная консультация по современным технологиям строительства, строительному процессу и документальному сопровождению. Поможем сделать выбор из готовых проектов.</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/1.webp" alt="1">
@@ -654,7 +693,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Пожелания и Стоимость</h4>
 									<p class="work__tab-text">Определение индивидуальных пожеланий и предпочтений по объекту, расчет предварительной стоимости с точностью 90-95%</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/2.webp" alt="2">
@@ -667,7 +706,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Договор на строительство</h4>
 									<p class="work__tab-text">Подписание договора на поэтапную реализацию проектирования и строительства объекта</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/3.jpg" alt="3">
@@ -680,7 +719,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Эскизный проект</h4>
 									<p class="work__tab-text">Формирование технического задания для архитектора и конструктора и утверждение эскизного проекта</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/4.webp" alt="4">
@@ -693,7 +732,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Оформление документов</h4>
 									<p class="work__tab-text">Оформление разрешительных документов, организация инженерных исследований земельного участка</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/5.webp" alt="5">
@@ -706,7 +745,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Разработка разделов</h4>
 									<p class="work__tab-text">Разработка архитектурного и конструктивного разделов проекта</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/6.webp" alt="6">
@@ -719,7 +758,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Согласование дополнений</h4>
 									<p class="work__tab-text">Оформление и согласование дополнений к договору по фактической стоимости и графику выполнения этапов работ</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/7.jpg" alt="7">
@@ -732,7 +771,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Старт строительства</h4>
 									<p class="work__tab-text">Старт строительства, фото-видео фиксация всех этапов и скрытых работ</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/8.jpg" alt="8">
@@ -745,7 +784,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Сдача этапов</h4>
 									<p class="work__tab-text">Сдача этапов по графику, подписание актов выполненных работ и оплата</p>
-									<a href="#" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									<div data-open-popup="call-popup-1" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/9.jpg" alt="9">
@@ -758,7 +797,7 @@
 								<div class="work__tab-content">
 									<h4 class="work__tab-title">Внутренняя отделка</h4>
 									<p class="work__tab-text">Подписание договора на создание и реализацию дизайн-проекта по внутренней отделке</p>
-									<a href="#" class="btn btn_transform">ЗАКАЗАТЬ ЗВОНОК</a>
+									<div data-open-popup="call-popup" class="btn btn_transform">ЗАКАЗАТЬ ЗВОНОК</div>
 								</div>
 								<div class="work__tab-image">
 									<img src="img/forhouse/work/10.jpg" alt="10">
@@ -777,7 +816,7 @@
 				<div class="container">
 					<div class="gift__body">
 						<h5 class="gift__body-text">При заказе строительства дома — геология участка и адаптированный рабочий проект <span>в подарок!</span></h5>
-						<a href="#" class="btn_transform btn">Получить консультацию</a>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
 					</div>
 				</div>
 			</div>
@@ -981,52 +1020,49 @@
 			<div class="text__container container">
 				<div class="text__body">
 					<div class="text__body-wrap">
-						<p class="p1">Хотите сделать ремонт в квартире, построить дом или реконструировать старую дачу? Тогда ремонтно-строительная компания ForRoom – это  то, что вам нужно! Мы – прогрессивная фирма, работающая по всем современным стандартам с акцентом на высоком качестве как работ, так и материалов. У нас работают только профессионалы, которые проанализируют, подскажут и помогут определиться, что именно вам нужно. Мы за четкие сроки, фиксированные цены и максимальную надежность. Все подробности – далее.</p>
-						<p class="p2">Что мы предлагаем</p>
-						<p class="p1">Наша компания реализует широкий спектр ремонтно-строительных услуг. Мы имеем два структурных подразделения – ForHouse и ForRoom.</p>
-						<p class="p1">Если вам необходимо восстановить старый частный дом, или построить его с нуля – обращайтесь в ForHouse. Речь идёт о следующих услугах:</p>
+						<p class="p1">Строительство новых домов и реконструкция старых – работа, которую лучше всех для вас выполнит строительная компания ForHouse. Сформированная в 2020-м году, наша команда состоит из специалистов из разных областей с многолетним опытом работы.</p>
+						<p class="p1">Мы знаем, как угодить клиенту и выполнить поставленные задачи максимально качественно, по современным стандартам и с учетом всех пожеланий. Если вы живете в Одессе или области – смело обращайтесь: мы предоставим необходимые услуги по адекватной цене.</p>
+						<p class="p2">Какие услуги мы предлагаем</p>
+						<p class="p1">Наша компания специализируется на предоставлении услуг по:</p>
 						<ul class="ul1">
-							<li>строительство:</li>
+							<li class="li1">строительству (частные дома, коттеджи, апартаменты, гостиницы, коммерческая недвижимость);</li>
+							<li class="li1">реконструкции (половины здания, дома целиком, недвижимости с достройкой, модернизация инженерных сетей).</li>
 						</ul>
+						<p class="p1">Более подробно о каждой услуге вы можете узнать у наших менеджеров по телефону +38 (048) 795 55 75 или же сразу заказать бесплатную консультацию (заявку можно оставить на сайте строительной компании www.forroom.com.ua/forhouse) и спланировать дальнейшее сотрудничество.</p>
+						<p class="p1">Детальнее о нашей работе:</p>
 						<ul class="ul1">
-							<li>дачных домов;</li>
-							<li>коттеджей;</li>
-							<li>гостиниц;</li>
-							<li>резиденций;</li>
-							<li>коммерческих объектов.</li>
+							<li class="li1">после консультации мы составляем список пожеланий клиента и предпочтений по объекту, на основе чего рассчитывается ориентировочная стоимость (с точностью до 90-95%);</li>
+							<li class="li1">далее готовится проект, и подписываются документы;</li>
+							<li class="li1">после чего непосредственно начинается строительство с дальнейшей фиксацией результатов, которые можно просматривать в специальном мобильном приложении;</li>
+							<li class="li1">и, наконец, сдача объекта в указанные сроки.</li>
 						</ul>
+						<p class="p2">Виды строительства</p>
+						<p class="p1">Наша фирма выполняет постройку объектов под ключ разной сложности, ширины, высоты и этажности, в зависимости от пожеланий клиента. Так, в строительной компании ForHouse вам могут оказать услуги по строительству:</p>
 						<ul class="ul1">
-							<li>реконструкция:</li>
+							<li class="li1">коттеджей;</li>
+							<li class="li1">дачей;</li>
+							<li class="li1">апартаментов;</li>
+							<li class="li1">гостиниц;</li>
+							<li class="li1">коммерческих объектов.</li>
 						</ul>
+						<p class="p1">В ходе строительных работ мы предоставляем следующие услуги: проектирование, установку фундамента; возведение каркаса здания и установка кровли, заполнение проемов и отделка фасада.</p>
+						<p class="p1">В работе мы используем высококачественные материалы, которые долго прослужат клиентам и не будут доставлять неудобств. При возведении стен и перегородок, мы отдаем предпочтение таким материалам, как керамоблок, кирпич и газобетон.</p>
+						<p class="p1">Отметим, что газобетон пользуется наибольшей популярностью благодаря цене, долговечности, простоте монтажа и низкому коэффициенту теплопроводности.</p>
+						<p class="p1">Мы отвечаем не только за качество материала, но и за качество выполненных работ, так как заботимся о своих клиентах!</p>
+						<p class="p2">Преимущества</p><p class="p1">Почему среди существующих фирм стоит обратиться именно к нам? Сотрудничая с нами, вы получаете:</p>
 						<ul class="ul1">
-							<li>половины здания;</li>
-							<li>дома целиком;</li>
-							<li>с достройкой.</li>
-						</ul>
-						<p class="p1">Наши сотрудники на основе анализа объекта и индивидуальных пожеланий составят максимально грамотный проект, используя качественные материалы и современные методики. Вы точно будете довольны результатами!</p>
-						<p class="p1">Если же вам требуется ремонт квартиры, или коммерческого здания – вам с радостью помогут профессионалы из подразделения ForRoom.</p>
-						<p class="p2">Какие ремонтные услуги мы предоставляем</p>
-						<p class="p1">В нашей фирме по ремонту квартир нас вы можете подобрать комплексный пакет ремонта в соответствии с потребностями:</p>
-						<ul class="ul1">
-							<li>Whitebox (чертежи, черновые работы, сантехнические и электромонтажные работы, отделка пола);</li>
-							<li>Базовый (Whitebox + натяжные потолки, поклейка обоев, санфаянс, осветительные приборы);</li>
-							<li>Оптимальный (Базовый + кухня под заказ, кондиционер, шторы и бойлер, полотенцесушитель, зеркало в ванную);</li>
-							<li>Максимальный (Оптимальный + духовой шкаф, вытяжка, варочная поверхность и холодильник; стиральная машинка; телевизоры и спальный гарнитур);</li>
-							<li>Индивидуальный сметный ремонт (неограниченный выбор материалов и поддержка дизайнера на всех этапах).</li>
-						</ul>
-						<p class="p1">Подробную информацию о каждом пакете вы найдете на официальном сайте www.forroom.com.ua.</p>
-						<p class="p2">Подробнее о преимуществах</p>
-						<p class="p1">Ремонтно-строительная компания ForRoom имеет целый ряд преимуществ, которые доказывают, что сотрудничество с нами – это выгодное финансовое вложение. Выбирая нас, вы получаете:</p>
-						<ul class="ul1">
-							<li>профессиональный подход (в нашей компании работают лучшие специалисты, которые грамотно выполняют свою работу);</li>
-							<li>никаких авансов и дополнительных платежей (в договоре прописывается фиксированная стоимость, которая оплачивается поэтапно по мере выполнения работ);</li>
-							<li>современные стандарты (все работы выполняются в соответствии со стандартами качества);</li>
-							<li>предоставление гарантийного сертификата на проделанные услуги;</li>
-							<li>поручительство за результат от ведущей компании на рынке недвижимости.</li>
+							<li class="li1">выполнение работ по современным стандартам, которые проверяются сертифицированным независимым технадзором ГИТН;</li>
+							<li class="li1">заключение договора с фиксированной ценой и сроками выполнения;</li>
+							<li class="li1">возможность следить за выполнением не посещая объект, благодаря специальному приложению;</li>
+							<li class="li1">отсутствие предоплат (оплата происходит поэтапно, по факту выполненных работ);</li>
+							<li class="li1">гарантия качества (по завершению вы получите гарантийный сертификат на свою недвижимость);</li>
+							<li class="li1">поручительство лидера рынка недвижимости за результаты работы;</li>
+							<li class="li1">сотрудничество с профессионалами на каждом этапе работы.</li>
 						</ul>
 						<p class="p2">Подытожим</p>
-						<p class="p1">Если вы живете в Одессе или области, хотите воспользоваться услугами строительной фирмы и получить максимально качественный результат – самое время обратиться в ремонтно-строительную компанию ForRoom. Мы гарантируем лучшее обслуживание, грамотный анализ, четко скоординированную работу, четкие цены и сроки.</p>
-						<p class="p1">Мы знаем, как сделать клиента довольным проделанной работой. Свяжитесь с нами и получите бесплатную консультацию!</p>
+						<p class="p1">Если вам нужны услуги строительной компании, чтобы возвести жилье своей мечты в Одессе или области, ForHouse – вариант, который подходит лучшим образом.</p>
+						<p class="p1">Мы внимательны к пожеланиям клиентов, ответственно анализируем все нюансы (в том числе геологические), чтобы в результате предоставить клиенту качественно построенные апартаменты его мечты, которые прослужат долгие годы. Отметим, что мы также предоставляем гарантийный сертификат на выполненную работу.</p>
+						<p class="p1">Свяжитесь с нами по телефону +38 (048) 795 55 75 или оставьте заявку на сайте www.forroom.com.ua/forhouse и сделайте правильный выбор!</p>
 					</div>
 				</div>
 
@@ -1078,6 +1114,9 @@
 	</div>
 
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/forpages.js"></script>
 	<script src="js/forhouse.js"></script>

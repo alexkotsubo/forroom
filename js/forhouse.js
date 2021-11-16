@@ -61,3 +61,7 @@ if (headerTitle) {
 		setTimeoutForSpan(prevSpan);
 	});
 }
+
+/* Advantages Lightgallery */
+
+lightGallery(document.getElementById('advantages-lightgallery')); 
