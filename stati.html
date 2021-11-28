@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Статьи компании ForHouse</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header header_simple" id="header" style="background-image: url('img/forum.jpg');">
+			<div class="header__wrap">
+				<!-- Nav -->
+
+				<nav class="nav fixed-padding" id="nav">
+					<div class="nav__body">
+						<a href="tel:+380487955575" class="nav__phone"><i aria-hidden="true" class="fas fa-phone"></i></a>
+						<div class="nav__logo">
+							<a class="nav__logo-link" href="#"><img src="img/logo.png" alt="ForRoom"></a>
+						</div>
+						<div class="nav__burger burger" id="nav-burger">
+							<div class="burger__btn">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="burger__bg"></div>
+						
+							<div class="burger__menu">
+								<div class="burger__nav">
+									<div class="burger__close-btn"></div>
+								</div>
+
+								<div class="burger__menu-wrap">
+									<div class="burger__logo">
+										<a href="#" class="burger__logo-link">
+											<img src="img/logo.png" alt="ForRoom">
+										</a>
+									</div>
+
+									<ul class="burger__list">
+										<li><a href="#" class="burger__link">ForRoom</a></li>
+										<li><a href="#" class="burger__link">ForHouse</a></li>
+										<li><a href="#" class="burger__link">Форум</a></li>
+									</ul>
+
+									<ul class="burger__buttons">
+										<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+										<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+										<li><a href="#" class="burger__buttons-link">Forum</a></li>
+									</ul>
+
+									<ul class="burger__socials">
+										<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="header__content nav-add-padding">
+					<div class="container">
+						<h1 class="header__content-title">статьи</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Stati -->
+
+		<section class="stati">
+			<div class="stati__container container">
+				<div class="stati__stati">
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/1.jpg" alt="1">
+						</div>
+
+						<h3 class="stati__cart-title">КАМИН В ИНТЕРЬЕРЕ ИЛИ КАК СОЗДАТЬ УЮТ ОДНИМ ШТРИХОМ</h3>
+						<ul class="stati__cart-list">
+							<li>29.01.2021</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/2.jpg" alt="2">
+						</div>
+
+						<h3 class="stati__cart-title">ПЕРЕПЛАНИРОВКА. КАК УЗАКОНИТЬ И НЕ СОЗДАТЬ СЕБЕ ПРОБЛЕМ</h3>
+						<ul class="stati__cart-list">
+							<li>29.01.2021</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">Что сделать первым, документы или реконструкцию? Когда мы решаем сделать перепланировку своей недвижимости то не всегда задаемся вопросом о том, насколько легальны те или иные</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/3.jpg" alt="3">
+						</div>
+
+						<h3 class="stati__cart-title">КАК ПРАВИЛЬНО ОФОРМИТЬ ВАННУЮ КОМНАТУ</h3>
+						<ul class="stati__cart-list">
+							<li>29.01.2021</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">В этой статье мы собрали несколько чрезвычайно полезных рекомендаций, которые помогут вам создать свою идеальную ванную комнату. Всем нам хочется иметь практичную и функциональную</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/4.jpg" alt="4">
+						</div>
+
+						<h3 class="stati__cart-title">5 ШТРИХОВ КОТОРЫЕ ОСВЕЖАТ ВАШЕ ЖИЛИЩЕ</h3>
+						<ul class="stati__cart-list">
+							<li>29.01.2021</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">Мы предлагаем добавить в декор квартиры несколько штрихов позволяющих всего в считанные минуты освежить дизайн всего помещения превратив его в нечто совершенно новое и интригующее</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/5.jpg" alt="5">
+						</div>
+
+						<h3 class="stati__cart-title">ТОП-10 ОШИБОК ПРИ РЕМОНТЕ И КАК ИХ ИЗБЕЖАТЬ</h3>
+						<ul class="stati__cart-list">
+							<li>12.01.2021</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">Пословица гласит, что ремонт сродни стихийному бедствию — его невозможно закончить, можно только пережить. А ведь и правда, как часто окидывая свежим взглядом только что</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+
+					<article class="stati__cart">
+						<div class="stati__cart-img">
+							<img src="img/articles/6.jpg" alt="6">
+						</div>
+
+						<h3 class="stati__cart-title">TIP-ON — УДОБСТВО ОТКРЫВАНИЯ МЕБЕЛИ</h3>
+						<ul class="stati__cart-list">
+							<li>19.10.2020</li>
+							<li>Комментариев нет</li>
+						</ul>
+						<p class="stati__cart-text">TIP-ON — удобство открывания мебели ! Будь то двери, поворотные подъемники или системы выдвижения, благодаря механической системе открывания TIP-ON мебель без ручек открывается легким прикосновением к</p>
+						<a href="#" class="stati__cart-btn">Читать ещё...</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_small">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<div class="footer__logo-img">
+								<img src="img/logo-white.png" alt="ForRoom">
+							</div>
+							<p class="footer__logo-text">Ремонтно-строительная компания</p>
+						</div>
+						<div class="footer__info-info">
+							<div class="footer__time">
+								<p class="footer__time-text">ВРЕМЯ РАБОТЫ:</p>
+								<p class="footer__time-time">Пн-Пт с 10:00 до 18:00</p>
+							</div>
+							<div class="footer__address">
+								<p class="footer__address-text">АДРЕС: <span>Одесса, ул. Толбухина 135 ТЦ Мегадом, павильон № 129</span></p>
+							</div>
+						</div>
+						<div class="footer__info-contacts">
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+							<a href="tel:+380487955575" class="footer__phone">+38(048)795-55-75</a>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<p class="footer__copyright">COMPANY FORROOM 2021 © ALL RIGHTS RESERVED</p>
+						<a href="#" class="footer__creator">CREATED BY IDEA-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

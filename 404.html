@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Статьи компании ForHouse</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Lost -->
+
+		<section class="lost">
+			<div class="lost__video">
+				<iframe class="elementor-background-video-embed" allowfullscreen="1" autoplay mute muted title="YouTube video player" src="https://www.youtube.com/embed/ZcBw06UbAws" id="widget2" data-gtm-yt-inspected-1_19="true" style="width: 1663px; height: 935.438px;" width="640" height="360" frameborder="0"></iframe>
+			</div>
+
+			<div class="lost__inner">
+				<div class="lost__nav">
+					<div class="container">
+						<ul class="lost__menu">
+							<li><a href="#">ForRoom</a></li>
+							<li><a href="#">ForHouse</a></li>
+							<li><a href="#">Форум</a></li>
+						</ul>
+						<div class="lost__burger">
+							<div class="lost__burger-open">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<div class="lost__burger-close"></div>
+							<ul class="lost__burger-menu">
+								<li><a href="#">ForRoom</a></li>
+								<li><a href="#">ForHouse</a></li>
+								<li><a href="#">Форум</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="lost__content">
+					<h1 class="lost__content-title">Вы заблудились?</h1>
+					<p class="lost__content-text">Мы не нашли страницу, которую Вы ищите</p>
+					<p class="lost__content-advice">Вы можете воспользоваться нашим поисковиком:</p>
+					<div class="lost__input">
+						<div class="lost__input-icon">
+							<i aria-hidden="true" class="fas fa-search"></i>
+						</div>
+						<input placeholder="Поиск..." type="text" title="Поиск">
+					</div>
+				</div>
+
+				<div class="lost__footer">
+					<div class="container">
+						<p class="lost__footer-copyright">Copyright © 2021 ForRoom — Ремонтно-строительная компания в Одессе | Работает на <a href="#">WordPress тема Astra</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="js/script.js"></script>
+	<script src="js/lost.js"></script>
+</body>
+</html>

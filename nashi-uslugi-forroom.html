@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Услуги компании Форрум</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header header_simple header_simple-2" id="header" style="background-image: url('img/forum.jpg');">
+			<div class="header__wrap">
+				<!-- Nav -->
+
+				<nav class="nav nav_small fixed-padding" id="nav">
+					<div class="nav__body">
+						<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+						<div class="nav__logo">
+							<a class="nav__logo-link" href="#"><img src="img/forroom-white.png" alt="ForRoom"></a>
+						</div>
+						<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+							<div class="burger__btn">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="burger__bg"></div>
+						
+							<div class="burger__menu">
+								<div class="burger__nav">
+									<div class="burger__close-btn"></div>
+								</div>
+
+								<div class="burger__menu-wrap">
+									<div class="burger__logo">
+										<a href="#" class="burger__logo-link">
+											<img src="img/logo.png" alt="ForRoom">
+										</a>
+									</div>
+
+									<ul class="burger__list">
+										<li><a href="#" class="burger__link">ForRoom</a></li>
+										<li><a href="#" class="burger__link">Наши Услуги</a></li>
+										<li><a href="#" class="burger__link">Портфолио</a></li>
+										<li><a href="#" class="burger__link">Форум</a></li>
+										<li><a href="#" class="burger__link">Контакты ForRoom</a></li>
+									</ul>
+
+									<ul class="burger__buttons">
+										<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+										<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+										<li><a href="#" class="burger__buttons-link">Forum</a></li>
+									</ul>
+
+									<ul class="burger__socials">
+										<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="header__content nav-add-padding">
+					<div class="container">
+						<h1 class="header__content-title">пакеты ремонтов</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Services -->
+
+		<section class="services">
+			<div class="container">
+				<div class="services__carts">
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/1.jpg');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Пакет<br>WhiteBox</h5>
+								<p class="services__cart-text">WhiteBox — это вся предчистовая отделка под ключ</p>
+								<p class="services__cart-price">140$ за кв.м.</p>
+								<a href="#" class="services__cart-btn btn btn_transform">подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/2.jpg');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Пакет<br>Базовый</h5>
+								<ul class="services__cart-list services__cart-list_circle">
+									<li>White BOX*</li>
+									<li>Санфаянс</li>
+									<li>Натяжные потолки</li>
+									<li>Двери</li>
+									<li>Обои</li>
+									<li>Ламинат и плитка</li>
+									<li>Осветительные приборы</li>
+								</ul>
+								<p class="services__cart-price">280$ за кв.м.</p>
+								<a href="#" class="services__cart-btn btn btn_transform">подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/3.jpg');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Пакет<br>Оптимальный</h5>
+								<ul class="services__cart-list services__cart-list_plus">
+									<li>Базовый*</li>
+									<li>Кухня под заказ</li>
+									<li>Дизайнерские шторы</li>
+									<li>Кондиционеры</li>
+									<li>Бойлер</li>
+									<li>Электрический полотенцесушитель</li>
+									<li>Зеркало с led подсветкой</li>
+								</ul>
+								<p class="services__cart-price">380$ за кв.м.</p>
+								<a href="#" class="services__cart-btn btn btn_transform">подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/4.jpg');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Пакет<br>Максимальный</h5>
+								<ul class="services__cart-list services__cart-list_plus">
+									<li>Оптимальный*</li>
+									<li>Телевизоры</li>
+									<li>Холодильник</li>
+									<li>Варочная поверхность</li>
+									<li>Вытяжка</li>
+									<li>Духовой шкаф</li>
+									<li>Стиральная машина</li>
+									<li>Спальный гарнитур</li>
+								</ul>
+								<p class="services__cart-price">480$ за кв.м.</p>
+								<a href="#" class="services__cart-btn btn btn_transform">подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/7.webp');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Стили<br>Ремонта</h5>
+								<ul class="services__cart-list services__cart-list_circle-small">
+									<li>Минимализм Функционализм</li>
+									<li>Лофт Брутализм</li>
+									<li>Современный Контемпорари</li>
+									<li>Скандинавский Эко стиль</li>
+								</ul>
+								<a href="#" class="services__cart-btn btn btn_transform">подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__cart">
+						<div class="services__cart-wrap">
+							<div class="services__cart-image">
+								<div class="services__cart-img" style="background-image: url('img/forroom/packages/8.webp');"></div>
+							</div>
+							<div class="services__cart-content">
+								<h5 class="services__cart-title">Пакет<br>Индивидуальный</h5>
+								<p class="services__cart-subtitle">Сметный ремонт</p>
+								<ul class="services__cart-list services__cart-list_circle-small">
+									<li>Неограниченный выбор материалов</li>
+									<li>Авторский надзор дизайнера на протяжении всего ремонта</li>
+								</ul>
+								<p class="services__cart-price">от 140$ за кв.м.</p>
+								<div data-open-popup="call-popup" class="services__cart-btn btn btn_transform">Получить консультацию</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Compare -->
+
+		<section class="compare compare_services" style="background-image: url('img/forroom/compare.jpg');">
+			<div class="compare__wrap">
+				<div class="container">
+					<h3 class="compare__title">Визуальное сравнение пакетов</h3>
+
+					<div class="compare__carts">
+						<div class="compare__cart">
+							<h5 class="compare__cart-title">«БАЗОВЫЙ» И «ОПТИМАЛЬНЫЙ»</h5>
+							<div class="compare-slider compare__slider" data-start-position="50%">
+								<div class="compare-slider__control">
+									<div class="compare-slider__button">
+										<i class="fa fa-angle-left"></i>
+										<i class="fa fa-angle-right"></i>
+									</div>
+								</div>
+								<div class="compare-slider__left">
+									<img src="img/forroom/packages/2.jpg" alt="1">
+									<p class="compare__slider-text">Базовый</p>
+								</div>
+								<div class="compare-slider__right">
+									<img src="img/forroom/packages/3.jpg" alt="2">
+									<p class="compare__slider-text">Оптимальный</p>
+								</div>
+							</div>
+							<p class="compare__cart-text">*Потяните за ползунок для визуального сравнения пакетов</p>
+						</div>
+
+						<div class="compare__cart">
+							<h5 class="compare__cart-title">«БАЗОВЫЙ» И «МАКСИМАЛЬНЫЙ»</h5>
+							<div class="compare-slider compare__slider" data-start-position="50%">
+								<div class="compare-slider__control">
+									<div class="compare-slider__button">
+										<i class="fa fa-angle-left"></i>
+										<i class="fa fa-angle-right"></i>
+									</div>
+								</div>
+								<div class="compare-slider__left">
+									<img src="img/forroom/packages/2.jpg" alt="1">
+									<p class="compare__slider-text">Базовый</p>
+								</div>
+								<div class="compare-slider__right">
+									<img src="img/forroom/packages/4.jpg" alt="2">
+									<p class="compare__slider-text">Максимальный</p>
+								</div>
+							</div>
+							<p class="compare__cart-text">*Потяните за ползунок для визуального сравнения пакетов</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_big">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__photos">
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/1.jpg');"></div>
+								<span class="footer__photo-title">ЖК Миконос</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/2.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Таировские-сады</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/3.jpg');"></div>
+								<span class="footer__photo-title">ЖК-4-Сезона</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/4.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Элегия-Парк</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="footer__info">
+						<div class="footer__contacts">
+							<p class="footer__contacts-title">Украина</p>
+							<address class="footer__contacts-address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+							<a href="tel:+380487955575" class="footer__contacts-tel">+38 (048) 795 55 75</a>
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="footer__menus">
+							<div class="footer__menu">
+								<p class="footer__menu-title">ForRoom</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Наши Услуги</a></li>
+									<li><a href="#">Портфолио</a></li>
+									<li><a href="#">Форум</a></li>
+									<li><a href="#">Контакты ForRoom</a></li>
+								</ul>
+							</div>
+
+							<div class="footer__menu">
+								<p class="footer__menu-title">Пакеты ремонта</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">White Box</a></li>
+									<li><a href="#">Базовый</a></li>
+									<li><a href="#">Оптимальный</a></li>
+									<li><a href="#">Максимальный</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__info-btn">
+							<div data-open-popup="call-popup" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__bottom-logo">
+							<img src="img/forroom-completely-white.png" alt="ForRoom">
+						</div>
+
+						<div class="footer__bottom-info">
+							<p class="footer__copyright">Copyright © 2021 ForRoom. All rights reserved.</p>
+							<p class="footer__creator">Created by Idea-X</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

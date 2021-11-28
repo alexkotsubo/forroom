@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav -->
+
+		<nav class="nav nav_small fixed-padding" id="nav">
+			<div class="nav__body">
+				<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+				<div class="nav__logo">
+					<a class="nav__logo-link" href="#"><img src="img/forroom-white.png" alt="ForRoom"></a>
+				</div>
+				<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+					<div class="burger__btn">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="burger__bg"></div>
+				
+					<div class="burger__menu">
+						<div class="burger__nav">
+							<div class="burger__close-btn"></div>
+						</div>
+
+						<div class="burger__menu-wrap">
+							<div class="burger__logo">
+								<a href="#" class="burger__logo-link">
+									<img src="img/logo.png" alt="ForRoom">
+								</a>
+							</div>
+
+							<ul class="burger__list">
+								<li><a href="#" class="burger__link">ForRoom</a></li>
+								<li><a href="#" class="burger__link">Наши Услуги</a></li>
+								<li><a href="#" class="burger__link">Портфолио</a></li>
+								<li><a href="#" class="burger__link">Форум</a></li>
+								<li><a href="#" class="burger__link">Контакты ForRoom</a></li>
+							</ul>
+
+							<ul class="burger__buttons">
+								<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+								<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+								<li><a href="#" class="burger__buttons-link">Forum</a></li>
+							</ul>
+
+							<ul class="burger__socials">
+								<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Product -->
+
+		<section class="product">
+			<div class="container">
+				<div class="product__header">
+					<div class="product__content" style="background-image: url('img/product.jpg');">
+						<div class="product__content-wrap nav-add-padding">
+							<h3 class="product__content-title">ЖК Таировские Сады</h3>
+							<ul class="product__content-list">
+								<li>Площадь : 55 кв.м.</li>
+								<li>Пакет ремонта: Индивидуальный</li>
+								<li>Стиль ремонта: Лофт</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="product__inner">
+					<div class="product__inner-wrap">
+						<div class="product__crumbs">
+							<a href="#">ForRoom <i aria-hidden="true" class="fas fa-angle-right"></i></a>
+							<a href="#">Наши Работы <i aria-hidden="true" class="fas fa-angle-right"></i></a>
+							<span>ЖК Таировские Сады</span>
+						</div>
+
+						<div class="product__btns">
+							<a href="#" class="product__btns-left">
+								<i class="fa fa-angle-left" aria-hidden="true"></i>
+								<div class="product__btns-text">
+									<p>Предыдущая</p>
+									<p>ЖК 32 Жемчужина</p>
+								</div>
+							</a>
+
+							<span class="product__btns-separator"></span>
+
+							<a href="#" class="product__btns-right">
+								<div class="product__btns-text">
+									<p>Следующая</p>
+									<p>ЖК Корфу</p>
+								</div>
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</a>
+						</div>
+
+						<div id="portfolio-grid" class="portfolio-grid portfolio-grid_product" data-columns>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/1.jpg" alt="1">
+							</a>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/2.jpg" alt="2">
+							</a>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/3.jpg" alt="3">
+							</a>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/4.jpg" alt="4">
+							</a>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/5.jpg" alt="5">
+							</a>
+							<a href="#" class="portfolio-grid__cart anim-item">
+								<img src="img/product/6.jpg" alt="6">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gift -->
+		
+				<section class="gift gift_product">
+					<div class="gift__wrap">
+						<div class="gift__body">
+							<h5 class="gift__body-text">Пройдите тест и получите от нас гарантированный подарок!</h5>
+							<a href="#" class="btn_transform btn">ПРОЙТИ ТЕСТ</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_big">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__photos">
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/1.jpg');"></div>
+								<span class="footer__photo-title">ЖК Миконос</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/2.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Таировские-сады</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/3.jpg');"></div>
+								<span class="footer__photo-title">ЖК-4-Сезона</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/4.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Элегия-Парк</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="footer__info">
+						<div class="footer__contacts">
+							<p class="footer__contacts-title">Украина</p>
+							<address class="footer__contacts-address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+							<a href="tel:+380487955575" class="footer__contacts-tel">+38 (048) 795 55 75</a>
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="footer__menus">
+							<div class="footer__menu">
+								<p class="footer__menu-title">ForRoom</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Наши Услуги</a></li>
+									<li><a href="#">Портфолио</a></li>
+									<li><a href="#">Форум</a></li>
+									<li><a href="#">Контакты ForRoom</a></li>
+								</ul>
+							</div>
+
+							<div class="footer__menu">
+								<p class="footer__menu-title">Пакеты ремонта</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">White Box</a></li>
+									<li><a href="#">Базовый</a></li>
+									<li><a href="#">Оптимальный</a></li>
+									<li><a href="#">Максимальный</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__info-btn">
+							<div data-open-popup="call-popup" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__bottom-logo">
+							<img src="img/forroom-completely-white.png" alt="ForRoom">
+						</div>
+
+						<div class="footer__bottom-info">
+							<p class="footer__copyright">Copyright © 2021 ForRoom. All rights reserved.</p>
+							<p class="footer__creator">Created by Idea-X</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/salvattore.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/product.js"></script>
+</body>
+</html>

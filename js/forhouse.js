@@ -23,7 +23,11 @@ if (headerTitle) {
 
 			for (let j = 0; j < word.length; j++) {
 				const span = document.createElement('span');
-				span.innerHTML = word[j];
+				if (word[j] === ' ') {
+					span.innerHTML = '&nbsp;';
+				} else {
+					span.innerHTML = word[j];
+				}
 				span.style.animationDelay = step + 's';
 				step += 0.1;
 				spans[i].appendChild(span);
@@ -38,10 +42,10 @@ if (headerTitle) {
 			const innerSpans = spans[i].querySelectorAll('span');
 
 			const setTimeoutForInnerSpan = j => {
-				innerSpans[j].style.animationName = 'showHeaderText';
+				innerSpans[j].style.animationName = 'forhouseShowHeaderText';
 
 				setTimeout(() => {
-					innerSpans[j].style.animationName = 'hideHeaderText';
+					innerSpans[j].style.animationName = 'forhouseHideHeaderText';
 				}, startSeconds - 2000);
 			};
 
@@ -61,7 +65,3 @@ if (headerTitle) {
 		setTimeoutForSpan(prevSpan);
 	});
 }
-
-/* Advantages Lightgallery */
-
-lightGallery(document.getElementById('advantages-lightgallery')); 

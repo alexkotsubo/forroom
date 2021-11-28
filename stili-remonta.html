@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header header_simple" id="header" style="background-image: url('img/forum.jpg');">
+			<div class="header__wrap">
+				<!-- Nav -->
+
+				<nav class="nav nav_small fixed-padding" id="nav">
+					<div class="nav__body">
+						<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+						<div class="nav__logo">
+							<a class="nav__logo-link" href="#"><img src="img/forroom-white.png" alt="ForRoom"></a>
+						</div>
+						<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+							<div class="burger__btn">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="burger__bg"></div>
+						
+							<div class="burger__menu">
+								<div class="burger__nav">
+									<div class="burger__close-btn"></div>
+								</div>
+
+								<div class="burger__menu-wrap">
+									<div class="burger__logo">
+										<a href="#" class="burger__logo-link">
+											<img src="img/logo.png" alt="ForRoom">
+										</a>
+									</div>
+
+									<ul class="burger__list">
+										<li><a href="#" class="burger__link">ForRoom</a></li>
+										<li><a href="#" class="burger__link">Наши Услуги</a></li>
+										<li><a href="#" class="burger__link">Портфолио</a></li>
+										<li><a href="#" class="burger__link">Форум</a></li>
+										<li><a href="#" class="burger__link">Контакты ForRoom</a></li>
+									</ul>
+
+									<ul class="burger__buttons">
+										<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+										<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+										<li><a href="#" class="burger__buttons-link">Forum</a></li>
+									</ul>
+
+									<ul class="burger__socials">
+										<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="header__content nav-add-padding">
+					<div class="container">
+						<h1 class="header__content-title">Four rooms</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Interior -->
+
+		<section class="interior">
+			<div class="container">
+				<h4 class="interior__title">Стили <span>Интерьера</span></h4>
+				<div class="interior__wrap">
+					<div class="interior__image">
+						<div class="interior__image-wrap ib">
+							<img src="img/сканди-scaled.jpg" alt="Сканди" class="ib_use">
+						</div>
+					</div>
+					<div class="interior__content">
+						<h6 class="interior__content-subtitle">Мы подготовили для Вас новую уникальную услугу, которая не имеет аналогов на рынке</h6>
+						<h4 class="interior__content-title">FOUR ROOMS</h4>
+						<p class="interior__content-text">Four rooms — это дизайнерский ремонт вашей квартиры под ключ!</p>
+						<p class="interior__content-text">Каждый из наших пакетов ремонта: “Базовый”, “Оптимальный”, “Максимальный” можно выбрать в четырех представленных стилях: Лофт, Минимализм, Скандинавский, Современный.</p>
+						<p class="interior__content-text">Наши дизайнеры подготовили подборки обоев, ламината, осветительных приборов, дверей, поверхностей мебели и многое другое. Все материалы подобраны от ведущих европейских производителей и являются лучшими в сегменте “цена-качество”.</p>
+						<p class="interior__content-text">Ниже на визуализациях изображены примеры дизайнов интерьера, выполненные из наших пакетных материалов, которые Вы можете заказать уже сейчас!</p>
+						<div class="interior__content-btn">
+							<a href="#" class="btn btn_transform">Пройти тест</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gift -->
+
+		<section class="gift gift_consultation gift_bold">
+			<div class="gift__wrap">
+				<div class="container">
+					<div class="gift__body">
+						<h5 class="gift__body-text">Пройдите тест и получите от нас гарантированный подарок!</h5>
+						<a href="#" class="btn_transform btn">ПРОЙТИ ТЕСТ</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- View -->
+
+		<section class="view">
+			<div class="container">
+				<h3 class="view__title">Минимализм/Функционализм</h3>
+				<div class="view__body">
+					<div class="view__lists">
+						<div class="view__lists-title">Особенности стиля:</div>
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Сдержанное освещение (общий вид)</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Скрытая мебельная фурнитура</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Ровные плоскости стен, потолков и полов</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Потолок без декоративных элементов</li>
+						</ul>
+					</div>
+
+					<div class="view__lists">
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Акцентные элементы - яркая картина, цветные подушки</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Отделка стен - под натуральный камень, дерево, декоративну штукатурку</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Пространство минимализма всегда эстетично и не заполнено лишней деталировкой</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Широкое применение белого цвета стен, больших зеркальных поверхностей, скрытой мебельной фурнитуры</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Iframe -->
+
+		<iframe scrolling="no" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen="true" style="display: flex;border: medium none; background-color: rgb(0, 0, 0); max-width: 100%; width: 100%; height: 640px;" src="https://kuula.co/share/collection/7Y2G7?fs=1&amp;vr=0&amp;sd=1&amp;autorotate=-0.12&amp;autop=10&amp;thumbs=0&amp;inst=0&amp;info=1&amp;logo=1&amp;enablejs=1&amp;priority=1" frameborder="0"></iframe>
+
+		<!-- View -->
+
+		<section class="view view_right">
+			<div class="container">
+				<h3 class="view__title">Лофт/Брутализм</h3>
+				<div class="view__body">
+					<div class="view__lists">
+						<div class="view__lists-title">Особенности стиля:</div>
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Бетонные стены, грубая штукатурка, необработанное дерево</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Для достижения стиля помогут жалюзи из дерева и подвесные светильники с подвесными плафонами</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Из мягкой мебели отлично впишется диван в ярком исполнении</li>
+						</ul>
+					</div>
+
+					<div class="view__lists">
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>В интерьере присутствуют чувство меры и равновесия</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Освещение многоуровневое, применяется бра, торшеры в современном стиле</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Монохромные цвета стен, частично используются панели из дерева</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Iframe -->
+
+		<iframe scrolling="no" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen="true" style="display: flex;border: medium none; background-color: rgb(0, 0, 0); max-width: 100%; width: 100%; height: 640px;" src="https://kuula.co/share/collection/7Y2GG?fs=1&amp;vr=0&amp;sd=1&amp;autorotate=-0.12&amp;autop=10&amp;thumbs=0&amp;inst=0&amp;info=1&amp;logo=1&amp;enablejs=1" frameborder="0"></iframe>
+
+		<!-- View -->
+
+		<section class="view">
+			<div class="container">
+				<h3 class="view__title">Современный/Контемпорари</h3>
+				<div class="view__body">
+					<div class="view__lists">
+						<div class="view__lists-title">Особенности стиля:</div>
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Простое и лаконичное планировочное решение. Минимум перегородок и возможность использовать одно помещение одновременно под разные задачи (гостиная-кухня, гардероб-спальня, спальня-кабинет).</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Рациональное использование пространства.</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Использование мебели для хранения вещей, форма и вид мебели не должна быть вычурным и замысловатым. Геометрически правильные формы.</li>
+						</ul>
+					</div>
+
+					<div class="view__lists">
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Нейтральный фон стен (пастельные тона) и мебели, служит основой для размещения акцентных элементов декора, арт-объектов, картин</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Материал отделки могут быть различные имитации под дерево, камень и ткань</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Чёткое зонирование открытого пространства, но при использовании обедняющего элемента (отделка стен, пола, цветовое решение, освещения), получения целостности.</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Стандартное решение для потолка – гладкая белая поверхность. Освещение из стекла и металла, без дополнительного убранства.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Iframe -->
+
+		<iframe scrolling="no" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen="true" style="display: flex;border: medium none; background-color: rgb(0, 0, 0); max-width: 100%; width: 100%; height: 640px;" src="https://kuula.co/share/collection/7Y2Gl?fs=1&amp;vr=0&amp;sd=1&amp;autorotate=-0.12&amp;autop=10&amp;thumbs=0&amp;inst=0&amp;info=1&amp;logo=1&amp;enablejs=1" frameborder="0"></iframe>
+
+		<!-- View -->
+
+		<section class="view view_right">
+			<div class="container">
+				<h3 class="view__title">Скандинавский/Эко стиль</h3>
+				<div class="view__body">
+					<div class="view__lists">
+						<div class="view__lists-title">Особенности стиля:</div>
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Природные материалы</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Мебель простой и правильной формы</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Потолок без декоративных элементов</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Полы - светлое дерево</li>
+						</ul>
+					</div>
+
+					<div class="view__lists">
+						<ul class="view__list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Стены - покраска, декоративная штукатурка</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Большое количество аксессуаров, декора и много текстиля</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>В интерьере широко используются живые растения</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i>Мебель под натуральный цвет дерева, ясень, дуб, тик, орех</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Iframe -->
+
+		<iframe scrolling="no" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen="true" style="display: flex;border: medium none; background-color: rgb(0, 0, 0); max-width: 100%; width: 100%; height: 640px;" src="https://kuula.co/share/collection/7Y2GY?fs=1&amp;vr=0&amp;sd=1&amp;autorotate=-0.12&amp;autop=10&amp;thumbs=0&amp;inst=0&amp;info=1&amp;logo=1&amp;enablejs=1" frameborder="0"></iframe>
+
+		<!-- Brands -->
+
+		<section class="brands brands_stili">
+			<div class="container">
+				<h3 class="brands__title">BRANDS</h3>
+				<p class="brands__text">Мы являемся дилером более 5000 отделочных материалов от ведущих производителей</p>
+				<div class="swiper brands__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/rehau.png" alt="1">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/plastolit.png" alt="2">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/philips-1.png" alt="3">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/osram.png" alt="4">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/marburg.png" alt="5">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/logo.png" alt="6">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/hager.png" alt="7">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/grohe.png" alt="8">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/blum.png" alt="9">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/schneider-electric.png" alt="10">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/rooms.png" alt="11">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/nowodvorski.png" alt="12">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/my-floor.png" alt="13">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/maytoni.png" alt="14">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/imprese.png" alt="15">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/erismann.png" alt="16">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/eglo.png" alt="17">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/egger.png" alt="18">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/agt.png" alt="19">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+								<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/a.s._creation.png" alt="20">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ready -->
+
+		<section class="ready">
+			<div class="container">
+				<div class="ready__body">
+					<div class="ready__content">
+						<h4 class="ready__title">Готовы делать ремонт?</h4>
+						<p class="ready__text">Выберите готовый пакет ремонта и получите дизайн проект в подарок</p>
+					</div>
+					<div data-open-popup="call-popup" class="btn btn_transform">Получить консультацию</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+
+		<section class="portfolio portfolio_gallery">
+			<div class="container">
+				<a href="#" class="portfolio__title">
+					<span>PORTFOLIO</span>
+					<span>Наши Работы</span>
+				</a>
+
+				<div id="portfolio-grid" class="portfolio-grid portfolio-grid_main" data-columns>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/1.jpeg" alt="1">
+						<div class="portfolio-grid__wrap">
+							<p>ЖК Таировские сады</p>
+						</div>
+					</div>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/2.jpeg" alt="2">
+						<div class="portfolio-grid__wrap">
+							<p>ЖК Гагарин плаза</p>
+						</div>
+					</div>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/3.jpeg" alt="3">
+						<div class="portfolio-grid__wrap">
+							<p>переулок Чайковского</p>
+						</div>
+					</div>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/4.jpeg" alt="4">
+						<div class="portfolio-grid__wrap">
+							<p>ЖК Элегия Парк</p>
+						</div>
+					</div>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/5.jpeg" alt="5">
+						<div class="portfolio-grid__wrap">
+							<p>ЖК Таировские Сады</p>
+						</div>
+					</div>
+					<div class="portfolio-grid__cart">
+						<img src="img/forroom/portfolio/6.jpeg" alt="6">
+						<div class="portfolio-grid__wrap">
+							<p>ЖК Корфу</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio__btn">
+					<a href="#" class="btn btn_transform">смотреть всё</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_big">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__photos">
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/1.jpg');"></div>
+								<span class="footer__photo-title">ЖК Миконос</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/2.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Таировские-сады</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/3.jpg');"></div>
+								<span class="footer__photo-title">ЖК-4-Сезона</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/4.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Элегия-Парк</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="footer__info">
+						<div class="footer__contacts">
+							<p class="footer__contacts-title">Украина</p>
+							<address class="footer__contacts-address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+							<a href="tel:+380487955575" class="footer__contacts-tel">+38 (048) 795 55 75</a>
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="footer__menus">
+							<div class="footer__menu">
+								<p class="footer__menu-title">ForRoom</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Наши Услуги</a></li>
+									<li><a href="#">Портфолио</a></li>
+									<li><a href="#">Форум</a></li>
+									<li><a href="#">Контакты ForRoom</a></li>
+								</ul>
+							</div>
+
+							<div class="footer__menu">
+								<p class="footer__menu-title">Пакеты ремонта</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">White Box</a></li>
+									<li><a href="#">Базовый</a></li>
+									<li><a href="#">Оптимальный</a></li>
+									<li><a href="#">Максимальный</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__info-btn">
+							<div data-open-popup="call-popup" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__bottom-logo">
+							<img src="img/forroom-completely-white.png" alt="ForRoom">
+						</div>
+
+						<div class="footer__bottom-info">
+							<p class="footer__copyright">Copyright © 2021 ForRoom. All rights reserved.</p>
+							<p class="footer__creator">Created by Idea-X</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/salvattore.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

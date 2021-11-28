@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Архивы Портфолио - ForRoom — Ремонтно-строительная компания в Одессе</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav -->
+
+		<nav class="nav nav_small fixed-padding" id="nav">
+			<div class="nav__body">
+				<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+				<div class="nav__logo">
+					<a class="nav__logo-link" href="#"><img src="img/forroom-white.png" alt="ForRoom"></a>
+				</div>
+				<div class="nav__burger burger nav__burger_small-text" id="nav-burger">
+					<div class="burger__btn">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="burger__bg"></div>
+				
+					<div class="burger__menu">
+						<div class="burger__nav">
+							<div class="burger__close-btn"></div>
+						</div>
+
+						<div class="burger__menu-wrap">
+							<div class="burger__logo">
+								<a href="#" class="burger__logo-link">
+									<img src="img/logo.png" alt="ForRoom">
+								</a>
+							</div>
+
+							<ul class="burger__list">
+								<li><a href="#" class="burger__link">ForRoom</a></li>
+								<li><a href="#" class="burger__link">Наши Услуги</a></li>
+								<li><a href="#" class="burger__link">Портфолио</a></li>
+								<li><a href="#" class="burger__link">Форум</a></li>
+								<li><a href="#" class="burger__link">Контакты ForRoom</a></li>
+							</ul>
+
+							<ul class="burger__buttons">
+								<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+								<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+								<li><a href="#" class="burger__buttons-link">Forum</a></li>
+							</ul>
+
+							<ul class="burger__socials">
+								<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Articles -->
+
+		<section class="nav-add-padding articles">
+			<div class="container">
+				<div class="articles__wrap">
+					<aside class="articles__sidebar">
+						<form action="#" class="articles__search">
+							<input type="text" placeholder="Поиск ...">
+							<div class="articles__search-icon">
+								<i aria-hidden="true" class="fas fa-search"></i>
+							</div>
+						</form>
+
+						<div class="articles__list">
+							<p class="articles__list-title">Свежие записи</p>
+							<ul class="articles__list-list">
+								<li><a href="#">пер. Чайковского, 14</a></li>
+								<li><a href="#">ЖК Корфу</a></li>
+								<li><a href="#">ЖК Таировские Сады</a></li>
+								<li><a href="#">ЖК 32 Жемчужина</a></li>
+								<li><a href="#">ЖК Элегия парк</a></li>
+							</ul>
+						</div>
+
+						<div class="articles__list">
+							<p class="articles__list-title">Свежие комментарии</p>
+						</div>
+
+						<div class="articles__list">
+							<p class="articles__list-title">Архивы</p>
+							<ul class="articles__list-list">
+								<li><a href="#">Ноябрь 2021</a></li>
+								<li><a href="#">Октябрь 2021</a></li>
+								<li><a href="#">Март 2021</a></li>
+								<li><a href="#">Февраль 2021</a></li>
+								<li><a href="#">Январь 2021</a></li>
+								<li><a href="#">Октябрь 2020</a></li>
+							</ul>
+						</div>
+
+						<div class="articles__list">
+							<p class="articles__list-title">Рубрики</p>
+							<ul class="articles__list-list">
+								<li><a href="#">Портфолио</a></li>
+								<li><a href="#">Статьи</a></li>
+							</ul>
+						</div>
+
+						<div class="articles__list">
+							<p class="articles__list-title">Мета</p>
+							<ul class="articles__list-list">
+								<li><a href="#">Войти</a></li>
+								<li><a href="#">Лента записей</a></li>
+								<li><a href="#">Лента комментариев</a></li>
+								<li><a href="#">WordPress.org</a></li>
+							</ul>
+						</div>
+					</aside>
+
+					<div class="articles__content">
+						<div class="articles__head">
+							<p>Статьи</p>
+						</div>
+
+						<div class="articles__articles">
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/1.jpg" alt="1" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">КАМИН В ИНТЕРЬЕРЕ ИЛИ КАК СОЗДАТЬ УЮТ ОДНИМ ШТРИХОМ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+		
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/2.jpg" alt="2" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">ПЕРЕПЛАНИРОВКА. КАК УЗАКОНИТЬ И НЕ СОЗДАТЬ СЕБЕ ПРОБЛЕМ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+		
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/3.jpg" alt="3" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">КАК ПРАВИЛЬНО ОФОРМИТЬ ВАННУЮ КОМНАТУ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+		
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/4.jpg" alt="4" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">5 ШТРИХОВ КОТОРЫЕ ОСВЕЖАТ ВАШЕ ЖИЛИЩЕ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+		
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/5.jpg" alt="5" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">ТОП-10 ОШИБОК ПРИ РЕМОНТЕ И КАК ИХ ИЗБЕЖАТЬ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+		
+							<article class="articles__cart">
+								<div class="articles__cart-wrap">
+									<div class="articles__cart-img ib">
+										<img src="img/articles/6.jpg" alt="6" class="ib_use">
+									</div>
+		
+									<h3 class="articles__cart-title">TIP-ON — УДОБСТВО ОТКРЫВАНИЯ МЕБЕЛИ</h3>
+									<ul class="articles__cart-list">
+										<li><a href="#">Оставьте комментарий</a></li>
+										<li><a href="#">Статьи</a></li>
+										<li><a href="#">От admin</a></li>
+									</ul>
+									<p class="articles__cart-text">В наше время можно подобрать камин под любой интерьер, вкус и техническое оснащение комнаты. Не зря дом принято называть семейным очагом. И правда, очаг, который в современности олицетворяет камин, мгновенно добавляет в любое пространство домашний уют.  Отдаете ли вы предпочтение очарованию и элегантности деревянного камина или предпочитаете монументальность и вневременность каменного, ваш камин должен отражать …</p>
+									<a href="#" class="articles__cart-btn">Читать полностью</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_big">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__photos">
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/1.jpg');"></div>
+								<span class="footer__photo-title">ЖК Миконос</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/2.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Таировские-сады</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/3.jpg');"></div>
+								<span class="footer__photo-title">ЖК-4-Сезона</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/4.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Элегия-Парк</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="footer__info">
+						<div class="footer__contacts">
+							<p class="footer__contacts-title">Украина</p>
+							<address class="footer__contacts-address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+							<a href="tel:+380487955575" class="footer__contacts-tel">+38 (048) 795 55 75</a>
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="footer__menus">
+							<div class="footer__menu">
+								<p class="footer__menu-title">ForRoom</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Наши Услуги</a></li>
+									<li><a href="#">Портфолио</a></li>
+									<li><a href="#">Форум</a></li>
+									<li><a href="#">Контакты ForRoom</a></li>
+								</ul>
+							</div>
+
+							<div class="footer__menu">
+								<p class="footer__menu-title">Пакеты ремонта</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">White Box</a></li>
+									<li><a href="#">Базовый</a></li>
+									<li><a href="#">Оптимальный</a></li>
+									<li><a href="#">Максимальный</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__info-btn">
+							<div data-open-popup="call-popup" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__bottom-logo">
+							<img src="img/forroom-completely-white.png" alt="ForRoom">
+						</div>
+
+						<div class="footer__bottom-info">
+							<p class="footer__copyright">Copyright © 2021 ForRoom. All rights reserved.</p>
+							<p class="footer__creator">Created by Idea-X</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

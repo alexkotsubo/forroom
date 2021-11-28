@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav -->
+
+		<nav class="nav nav_small fixed-padding" id="nav">
+			<div class="nav__body">
+				<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+				<div class="nav__logo">
+					<a class="nav__logo-link" href="#"><img src="img/forhouse-white.png" alt="ForHouse"></a>
+				</div>
+				<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+					<div class="burger__btn">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="burger__bg"></div>
+				
+					<div class="burger__menu">
+						<div class="burger__nav">
+							<div class="burger__close-btn"></div>
+						</div>
+
+						<div class="burger__menu-wrap">
+							<div class="burger__logo">
+								<a href="#" class="burger__logo-link">
+									<img src="img/forhouse-white.png" alt="ForHouse">
+								</a>
+							</div>
+
+							<ul class="burger__list">
+								<li><a href="#" class="burger__link">ForRoom</a></li>
+								<li><a href="#" class="burger__link">Наши Услуги</a></li>
+								<li><a href="#" class="burger__link">Портфолио</a></li>
+								<li><a href="#" class="burger__link">Форум</a></li>
+								<li><a href="#" class="burger__link">Контакты</a></li>
+							</ul>
+
+							<ul class="burger__buttons">
+								<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+								<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+								<li><a href="#" class="burger__buttons-link">Forum</a></li>
+							</ul>
+
+							<ul class="burger__socials">
+								<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Header -->
+
+		<header class="nav-add-margin header header_withhover" id="header">
+			<div class="header__slider">
+				<div class="header__slider-image" style="background-image: url('img/architectural-house.jpg');"></div>
+				<div class="header__slider-image" style="background-image: url('img/kontakty-2.jpg');"></div>
+			</div>
+
+			<div class="header__wrap">
+				<div class="header__content">
+					<div class="container">
+						<h1 class="header__content-title anim-item">Строительство</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Implement -->
+
+		<section class="implement">
+			<div class="container">
+				<div class="implement__top">
+					<div class="implement__slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image: url('img/implement/1.jpg');"></div>
+								<div class="swiper-slide" style="background-image: url('img/implement/2.jpg');"></div>
+								<div class="swiper-slide" style="background-image: url('img/implement/3.jpg');"></div>
+							</div>
+						</div>
+					</div>
+					<div class="implement__about">
+						<h3 class="implement__about-title">Реализуем проект наилучшим образом</h3>
+						<p class="implement__about-text">Компания специализируется на строительстве коттеджей, дачных домов, резиденций, гостиниц и коммерческих объектов.  При строительстве применяются современных технологии в рамках требований ДСТУ и популярные стройматериалы производства лидеров рынка.</p>
+					</div>
+				</div>
+
+				<div class="implement__bottom">
+					<div class="implement__bottom-part">
+						<p class="implement__text">Наши специалисты разработают для Вас индивидуальный проект в широком спектре архитектурных стилей, учитывая все пожелания и доступный бюджет или помогут подобрать готовый подходящий  проект и адаптируют под Ваш земельный участок.</p>
+						<p class="implement__text">Управление организацией и производством работ осуществляется с использованием специального мобильного приложения, где отображаются все операции, документооборот и фотофиксация скрытых работ. Важно что, заказчик может удаленно наблюдать за продвижением работ по графику и оперативно согласовывать запросы специалистов.</p>
+					</div>
+					<div class="implement__bottom-part">
+						<p class="implement__text">Контроль выполнения работ на каждом объекте, осуществляется руководителем проекта — прорабом и техническим директором, а также инженером технадзора, сертифицированным в ГИТН, который также проверяет и визирует все этапы в актах выполненных работ. Кстати, подчиняется он непосредственно учредителю).</p>
+						<p class="implement__text">Мы организуем надежную круглосуточную охрану Вашего объекта на всех этапах производства работ, которую будет осуществлять специализированное подразделение по безопасности.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gift -->
+
+		<section class="gift gift_consultation ib anim-item">
+			<img src="img/forhouse/consultation.jpg" alt="consultation" class="ib_use">
+
+			<div class="gift__wrap">
+				<div class="container">
+					<div class="gift__body">
+						<h5 class="gift__body-text">Строим дом без переплат!</h5>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Steps -->
+
+		<section class="steps">
+			<div class="steps__container container">
+				<h2 class="steps__title">Этапы <span>Строительства</span></h2>
+			</div>
+			<div class="steps__steps">
+				<div class="steps__step steps__step_small">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-image anim-item ib">
+								<img src="img/steps/1.jpg" alt="1" class="ib_use">
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Консультация</h3>
+								<p class="steps__step-text anim-item">Поможем определиться с размерами дома, этажности, состава необходимых внутренних помещений, инженерного оснащения и архитектурного предпочтения по будущему объекту. Наши специалисты на базе проектов других домов помогут Вам определится с выбором и ответят на все вопросы, сориентируют по бюджету строительства с точностью 90-95%.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_container">
+					<div class="steps__step-content">
+						<div class="steps__step-container container">
+							<div class="steps__step-body">
+								<h3 class="steps__step-title anim-item">Проектирование</h3>
+								<p class="steps__step-text anim-item">Разрабатываем с Вами эскизные планы намерений строительства и проведём инженерные исследования на участке. Геодезия земельного участка и геология пятна застройки обеспечат нас достоверной информацией для принятия обоснованных, рациональных и бюджетных решений при создании проекта. Далее, разработка рабочих разделов проекта для строителей и а также, поможем получить разрешительные документы для последующего ввода объекта в эксплуатацию. Рабочий проект содержит всю необходимую информацию для проведения работ, включая объемы и характеристики материалов из которых будет возводится здание. Проект позволит нам выполнить работы в оптимальные сроки, координировать работу смежных бригад и мастеров, обеспечить своевременную поставку материалов, соответствующего качества и контроль объемов расходования.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="steps__step-image">
+						<div class="steps__step-img ib">
+							<img src="img/steps/2.jpg" alt="2" class="ib_use">
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_slider">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-slider">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image: url('img/steps/3.jpg');"></div>
+										<div class="swiper-slide" style="background-image: url('img/steps/4.jpg');"></div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Устройство фундамента</h3>
+								<p class="steps__step-text anim-item">В фундаменте, главное обеспечить правильную передачу нагрузок веса всего объекта на грунт. В зависимости от грунтов на участке, учитывая размеры и особенности объекта, чаще всего проектируем и устраиваем ленточные фундаменты, сборные или монолитные, реже применяется монолитная плита или свайно-ростверковый фундамент. И очень важно, при выполнении работ добросовестно защитить фундамент от внешних воздействий — промерзания и грунтовых вод, как и указано в проекте. Песчано-щебневая подушка, опалубка, закладные на водопровод и канализацию, спецификация на арматуру при армировании, устройство узлов, паспорт на применяемый бетон — все скрытые работы и накладные фотографируется в процессе и сохраняются в Ваш личный кабинет.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_slider steps__step_slider-reverse">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-slider">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image: url('img/steps/5.jpg');"></div>
+										<div class="swiper-slide" style="background-image: url('img/steps/6.jpg');"></div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Устройство каркаса здания</h3>
+								<p class="steps__step-text anim-item">Этап включает, монтаж несущих стен и перегородок, устройство железобетонных перемычек, колонн, армопоясов и межэтажных перекрытий. Для возведения стен и перегородок, применяем, на Ваш выбор — керамоблок, кирпич или газобетон. Все материалы имеют свои преимущества, но наиболее популярным в регионе является газобетон, плотностью 400 кг/м3. Газобетонные блоки имеют оптимальный набор качеств — цена, прочность, долговечность, простота монтажа и доставки, низкий коэффициент теплопроводности, легкость дальнейшей внешней и внутренней отделки. Межэтажные перекрытия, в соответствии с проектом, устраиваются трёх типов: деревянно-балочные со звукоизоляцией, пустотные железобетонные плиты или монолитная армированная бетонная плита. Существенно отличаются по бюджету при стандартном домостроении. Чаще всего применяем плиты, они оптимальные по цене, прочности и звукоизоляции. Деревянно-балочные дешевле примерно на 40%, но уступают плите в звукоизоляции и принимаемой нагрузке на все 50%. Монолит дороже плит примерно в два раза, но в определенных случаях эти варианты — являются оптимальным решением.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_slider">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-slider">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image: url('img/steps/7.jpg');"></div>
+										<div class="swiper-slide" style="background-image: url('img/steps/8.jpg');"></div>
+										<div class="swiper-slide" style="background-image: url('img/steps/9.jpg');"></div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Устройство кровли</h3>
+								<p class="steps__step-text anim-item">Скатная или плоская, согласно проекта. При монтаже стропильной системы необходимо обеспечить надежную передачу нагрузок на несущие стены и качественно обработать древесину огнебиозащитой. По желанию и бюджету заказчика: керамическая, бетонная, битумная, металлическая или сланцевая черепицы - выбор кровельного покрытия по фактуре и цвету достаточно велик. Неоспоримым лидером рынка кровельных материалов является металлочерепица, главное использовать металл, который соответствует требованиям ДСТУ 8802:2018. При монтаже скатной кровли, с любым из перечисленных кровельных материалов, важно обеспечить идеальную гидроизоляцию, проектный слой утепления, пароизоляцию и соответствующую вентиляцию подкровельного пространства. При выборе заказчиков архитектурных стилей объекта типа хай-тек или минимализм, где применяются плоские кровли, устраиваем утепленные кровельные пироги плоских кровель из рулонных ПВХ и битумных материалов. Важно обеспечить достаточную разуклонку для эффективного отвода воды и исключить замерзание и засорение водосточной системы.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_slider steps__step_slider-reverse">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-slider">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image: url('img/steps/10.jpg');"></div>
+										<div class="swiper-slide" style="background-image: url('img/steps/11.jpg');"></div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Заполнение проемов</h3>
+								<p class="steps__step-text anim-item">Остекление и установка входных дверей. Важно при монтаже светопрозрачных конструкций и дверей обеспечить герметичность, исключить мостики холода применяя технологию теплого монтажа. В зависимости от назначения и эксплуатации объекта, рекомендуем обеспечить защиту от несанкционированного проникновения.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_small-2">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-image ib">
+								<img src="img/steps/12.jpg" alt="12" class="ib_use">
+							</div>
+							<div class="steps__step-content">
+								<h3 class="steps__step-title anim-item">Отделка фасада</h3>
+								<p class="steps__step-text anim-item">Устройство декоративных элементов в соответствии с архитектурным стилем проекта. Облицовка или нанесение покрытия - травертин, клинкер, дерево, мозаика, декоративные штукатурки и структурные краски, комбинация на фасаде разных структур по системе утепления минватой или пенополистиролом, большой выбор цветов. При устройстве системы утепления обеспечиваем соответствующий проекту слой утепления и армировку, согласно рекомендаций технологической карты производителя смесей. Применяем материалы, которые соответствуют коэффициенту паропроницаемости несущих стен, чтобы не запереть пар и влагу в стенах. По окончании, осуществляется подшивка свесов кровли, террас, козырьков и монтаж водосточной системы.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gift -->
+
+		<section class="gift gift_consultation gift_customer anim-item">
+			<div class="gift__wrap">
+				<div class="container">
+					<div class="gift__body">
+						<h5 class="gift__body-text">Наш строительный опыт и умелые руки создадут в вашем доме комфорт и уют!</h5>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects -->
+
+		<section class="projects projects_slider">
+			<div class="container">
+				<h2 class="projects__title">Наши <span>Проекты</span></h2>
+
+				<div class="projects__slider">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/1.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0026</span>
+										<span class="projects__slider-text">Компактный, но просторный за счёт продуманной планировки, дом с мансардой и крытой террасой.</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/2.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0035</span>
+										<span class="projects__slider-text">Удобный одноэтажный дом с тремя спальнями и огромной гостинной для всей семьи!</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/3.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0063</span>
+										<span class="projects__slider-text">Универсальный уютный современный дом - идеальное решение для небольшого участка с доступным бюджетом строительства</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/4.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0092</span>
+										<span class="projects__slider-text">Просторный одноэтажный дом для большой семьи в классическом стиле</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/5.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0202</span>
+										<span class="projects__slider-text">Аккуратный и практичный дом с функциональной планировкой и экономичный при эксплуатации</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="projects__slider-image" style="background-image: url('img/projects/6.jpg');"></div>
+								<a href="#" class="projects__slider-inner">
+									<div class="projects__slider-wrap">
+										<span class="projects__slider-title">FH-0060</span>
+										<span class="projects__slider-text">Современный функциональный одноэтажный дом с большой площадью остекления в гостиной</span>
+										<span class="projects__slider-btn">Перейти</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+
+						<div class="swiper-button-prev projects__slider-prev">
+							<i class="fas fa-chevron-left"></i>
+						</div>
+						<div class="swiper-button-next projects__slider-next">
+							<i class="fas fa-chevron-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advantages -->
+
+		<section class="advantages advantages_stroitelstvo">
+			<div class="advantages__container container">
+				<div class="advantages-carts anim-item">
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/1.jpg" alt="1" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/gitn.png" alt="ГИТН">
+							</div>
+							<h5 class="advantages-carts__title">Технадзор</h5>
+							<p class="advantages-carts__text">Сертифицированный независимый технадзор ГИТН</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/2.jpg" alt="2" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/1.png" alt="1">
+							</div>
+							<h5 class="advantages-carts__title">Никаких авансов</h5>
+							<p class="advantages-carts__text">Только поэтапная оплата по факту выполнения работ</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/3.jpg" alt="3" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/2.png" alt="2">
+							</div>
+							<h5 class="advantages-carts__title">Гарантия</h5>
+							<p class="advantages-carts__text">Оформляем договор, устанавливаем сроки и стоимость, предоставляем гарантию на готовый объект</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/4.jpg" alt="4" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/3.png" alt="3">
+							</div>
+							<h5 class="advantages-carts__title">Поручительство</h5>
+							<p class="advantages-carts__text">Поручительство лидера рынка недвижимости за результаты работы</p>
+							<div id="advantages-lightgallery">
+								<a href="img/IMAGE-2021-02-03-163051.jpg">
+									<div class="btn advantages-carts__btn">Ознакомиться</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Text -->
+
+		<section class="text">
+			<div class="text__container container">
+				<div class="text__body">
+					<div class="text__body-wrap">
+						<p class="p1">Строительство частного дома – дело, к которому нужно подойти ответственно, поскольку от качества проделанной работы зависит, сколько дом прослужит и будет ли ремонт радовать владельца. Это дело лучше поручить специалистам с большим опытом в данной сфере. Например, вы можете заказать дом под ключ у одесской строительной компании ForHouse.</p>
+						<p class="p1">Доверьтесь профессионалам, чтобы быть уверенным в качестве работы. Почему именно ForHouse? На это есть ряд причин, о которых расскажем далее.</p>
+						<p class="p2">Что мы предлагаем</p>
+						<p class="p1">ForHouse предоставляет услуги строительства домов различно площади, стиля и функциональности, их объединяет высокое качество материалов и проделанных работ.</p>
+						<p class="p1">Мы занимаемся строительством и реконструкцией:</p>
+						<ul class="ul1">
+							<li class="li1">дачных домов;</li>
+							<li class="li1">коттеджей;</li>
+							<li class="li1">гостиниц;</li>
+							<li class="li1">резиденций;</li>
+							<li class="li1">коммерческих объектов.</li>
+						</ul>
+						<p class="p1">Один этаж или два, с балконом или без, большие окна или стандартные, бюджетный экономичный вариант или просторный современный – мы учтём любые ваши пожелания!</p>
+						<p class="p1">На сайте компании www.forroom.com.ua/forhouse можно ознакомиться с выполненными проектами одноэтажных и двухэтажных зданий различных стилей и планировок.</p>
+						<p class="p2">Почему ForHouse</p>
+						<p class="p1">Если необходимо строительство домов с нуля под ключ в Одессе или области – выбирайте нашу фирму. Среди наших преимуществ:</p>
+						<ul class="ul1">
+							<li class="li1">никаких авансов (компания не берет деньги наперед, только частями по факту выполненных работ);</li>
+							<li class="li1">технадзор (качество материалов и соответствие выполненных работ современным стандартам проверяет независимый сертифицированный технадзор ГИТН);</li>
+							<li class="li1">охрана территории (во время строительства участок будет под наблюдением);</li>
+							<li class="li1">гарантии (оформляется договор с четкими сроками выполнения и фиксированной стоимостью, на выполненный объект предоставляется гарантия);</li>
+							<li class="li1">поручительство (будьте уверены в выборе – за результаты работы поручается лидер рынка недвижимости).</li>
+						</ul>
+						<p class="p2">Этапы работы и их стоимость</p>
+						<p class="p1">Давайте подробнее разберем, какие этапы вас ждут.</p>
+						<p class="p1">Консультация – первый этап: специалисты помогут определиться с этажностью дома, его размерами и стилем. Кроме того, получите ответы на все техвопросы, а также узнаете расценки на строительство с точностью 90-95%.</p>
+						<p class="p1">Далее проводится инженерное изучение участка, с учетом которого разработан и утвержден детальный проект здания с указаниями необходимых размеров, материалов и остальных нюансов, что позволит выполнить работы в оптимальные сроки и на начальной стадии наладить процессы.</p>
+						<p class="p1">После подготовительного этапа наша команда начинает непосредственно выполнение строительных работ. В первую очередь – это устройство фундамента, каркаса и кровли здания. Далее идет заполнение проёмов и отделка фасада. Работа будет выполнена по всем современным стандартам и с использованием высококачественных материалов.</p>
+						<p class="p1">Отметим, что цена постройки дома с нуля зависит параметров дома, выбранных материалов, показателей анализа участка и дополнительных пожеланий. Так, выполненные проекты, с которыми можно ознакомиться на сайте, колеблются в районе 495-616$ за квадратный метр.</p>
+						<p class="p2">Подытожим</p>
+						<p class="p1">Если вы хотите заказать строительство дома под ключ в Одессе или области высокого качества и с адекватным прайсом – обращайтесь в ForHouse! Мы учтем пожелания, дадим рекомендации от профессионалов и за четкие сроки по фиксированной цене построим дом вашей мечты.</p>
+						<p class="p1">Вы можете не сомневаться в качестве работ, поскольку они будут проверяться независимым органом, как и качество материалов. А по окончанию строительства вы получите гарантийный сертификат.</p>
+						<p class="p1">Отбросьте сомнения и свяжитесь с менеджерами(по телефону +38 (048) 795 55 75, или оставьте заявку на сайте www.forroom.com.ua.</p>
+					</div>
+				</div>
+
+				<div class="text__btns">
+					<div class="text__btns-btn active"><i class="fas fa-chevron-down"></i> Показать</div>
+					<div class="text__btns-btn"><i class="fas fa-chevron-up"></i> Скрыть</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_medium">
+			<div class="footer__container container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<img src="img/forhouse-white.png" alt="forhouse">
+							<p class="footer__logo-text">Строительство и Реконструкция Домов</p>
+						</div>
+
+						<a href="#" class="footer__tel">+38 (048) 795 55 75</a>
+						<address class="footer__address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+					</div>
+
+					<div class="footer__menu">
+						<p class="footer__menu-title">Меню</p>
+						<ul class="footer__menu-list">
+							<li><a href="#" class="active">ForHouse</a></li>
+							<li><a href="#">Строительство</a></li>
+							<li><a href="#">Реконструкция</a></li>
+							<li><a href="#">Проекты</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+
+					<div class="footer__projects">
+						<p class="footer__projects-title">Проекты</p>
+						<div class="footer__projects-list">
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/1.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/2.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/3.jpg');"></a>
+						</div>
+						<a href="#" class="footer__projects-text">Created by Idea-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/stroitelstvo.js"></script>
+	<script src="js/header-withhover.js"></script>
+</body>
+</html>

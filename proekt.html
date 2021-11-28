@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav -->
+
+		<nav class="nav nav_small fixed-padding" id="nav">
+			<div class="nav__body">
+				<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+				<div class="nav__logo">
+					<a class="nav__logo-link" href="#"><img src="img/forhouse-white.png" alt="ForHouse"></a>
+				</div>
+				<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+					<div class="burger__btn">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="burger__bg"></div>
+				
+					<div class="burger__menu">
+						<div class="burger__nav">
+							<div class="burger__close-btn"></div>
+						</div>
+
+						<div class="burger__menu-wrap">
+							<div class="burger__logo">
+								<a href="#" class="burger__logo-link">
+									<img src="img/forhouse-white.png" alt="ForHouse">
+								</a>
+							</div>
+
+							<ul class="burger__list">
+								<li><a href="#" class="burger__link">ForRoom</a></li>
+								<li><a href="#" class="burger__link">Наши Услуги</a></li>
+								<li><a href="#" class="burger__link">Портфолио</a></li>
+								<li><a href="#" class="burger__link">Форум</a></li>
+								<li><a href="#" class="burger__link">Контакты</a></li>
+							</ul>
+
+							<ul class="burger__buttons">
+								<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+								<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+								<li><a href="#" class="burger__buttons-link">Forum</a></li>
+							</ul>
+
+							<ul class="burger__socials">
+								<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Proekt -->
+
+		<section class="proekt">
+			<div class="proekt__container container">
+				<div class="proekt__info">
+					<div class="proekt__images">
+						<div id="proekt__images-main" class="proekt__images-main">
+							<a href="img/proekt/1.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/proekt/1.jpg" alt="1" class="ib_use">
+								</span>
+							</a>
+						</div>
+
+						<div id="proekt__images-secondary" class="proekt__images-secondary">
+							<a href="img/proekt/2.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/proekt/2.jpg" alt="2" class="ib_use">
+								</span>
+							</a>
+							<a href="img/proekt/3.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/proekt/3.jpg" alt="3" class="ib_use">
+								</span>
+							</a>
+							<a href="img/proekt/4.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/proekt/4.jpg" alt="4" class="ib_use">
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="proekt__animation">
+						<iframe src="https://embed.lottiefiles.com/animation/22467"></iframe>
+					</div>
+
+					<div class="proekt__about">
+						<h2 class="proekt__about-title">Проект FH-0027</h2>
+						<p class="proekt__about-text">Элегантный, комфортный современный двухэтажный дом с гаражом в европейском стиле. Гармоничное конструктивное решение наполненное простором и функционалом.</p>
+						<div class="proekt__btn">
+							<a href="#" class="btn btn_transform">Все проекты</a>
+						</div>
+						<div id="proekt-lightgallery" class="proekt__about-img">
+							<a href="img/blueprint/1.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/blueprint/1.jpg" alt="1" class="ib_use">
+								</span>
+							</a>
+							<a href="img/blueprint/2.jpg" class="proekt__image">
+								<span class="proekt__image-wrap ib">
+									<img src="img/blueprint/2.jpg" alt="2" class="ib_use">
+								</span>
+							</a>
+						</div>
+						<div class="proekt__price">
+							<p class="proekt__price-text">Стоимость строительства готового дома с проектом, материалами, работой, арендой механизмов и уборкой:</p>
+							<span class="proekt__price-price">$123793</span>
+						</div>
+						<div class="proekt__about-btn">
+							<div data-open-popup="call-popup-1" class="btn btn_transform">Получить консультацию</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="proekt__table">
+					<h4 class="proekt__table-title">Параметры</h4>
+					<table class="proekt__table-table">
+						<tbody>
+							<tr>
+								<td><img src="img/proekt-icons/1.png" alt="1"></td>
+								<td>Общая площадь</td>
+								<td>200 кв. м.</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/2.png" alt="2"></td>
+								<td>Этажность</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/3.png" alt="3"></td>
+								<td>Количество спален</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/4.png" alt="4"></td>
+								<td>Количество санузлов</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/5.png" alt="5"></td>
+								<td>Срок строительства, рабочих дней</td>
+								<td>195</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="proekt__table">
+					<h4 class="proekt__table-title">Стоимость</h4>
+					<table class="proekt__table-table">
+						<tbody>
+							<tr>
+								<td><img src="img/proekt-icons/6.png" alt="6"></td>
+								<td>Проектирование, инженерные исследования и подготовительные работы</td>
+								<td>4481$</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/7.png" alt="7"></td>
+								<td>Фундамент — ленточный монолитный, гидроизоляция, утепление, армированные бетонные полы по грунту</td>
+								<td>26153$</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/8.png" alt="8"></td>
+								<td>Каркас — газобетон, армопояса, колонны, перекрытие 1 эт. плиты ПК, 2 эт. деревянно-балочное с утеплением, лестничный марш</td>
+								<td>48083$</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/9.png" alt="9"></td>
+								<td>Кровля — металлочерепица, вальмовая стропильная система, подшивка свесов и водосточная система</td>
+								<td>17496$</td>
+							</tr>
+							<tr>
+								<td><img src="img/proekt-icons/10.png" alt="10"></td>
+								<td>Фасад — система утепления с декоративной отделкой, энергосберегающее остекление, входные двери</td>
+								<td>27579$</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advantages -->
+
+		<section class="advantages advantages_proekt">
+			<div class="advantages__container container">
+				<div class="advantages-carts anim-item">
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/1.jpg" alt="1" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/gitn.png" alt="ГИТН">
+							</div>
+							<h5 class="advantages-carts__title">Технадзор</h5>
+							<p class="advantages-carts__text">Сертифицированный независимый технадзор ГИТН</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/2.jpg" alt="2" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/1.png" alt="1">
+							</div>
+							<h5 class="advantages-carts__title">Никаких авансов</h5>
+							<p class="advantages-carts__text">Только поэтапная оплата по факту выполнения работ</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/3.jpg" alt="3" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/2.png" alt="2">
+							</div>
+							<h5 class="advantages-carts__title">Гарантия</h5>
+							<p class="advantages-carts__text">Оформляем договор, устанавливаем сроки и стоимость, предоставляем гарантию на готовый объект</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/4.jpg" alt="4" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/3.png" alt="3">
+							</div>
+							<h5 class="advantages-carts__title">Поручительство</h5>
+							<p class="advantages-carts__text">Поручительство лидера рынка недвижимости за результаты работы</p>
+							<div id="advantages-lightgallery">
+								<a href="img/IMAGE-2021-02-03-163051.jpg">
+									<div class="btn advantages-carts__btn">Ознакомиться</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_medium">
+			<div class="footer__container container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<img src="img/forhouse-white.png" alt="forhouse">
+							<p class="footer__logo-text">Строительство и Реконструкция Домов</p>
+						</div>
+
+						<a href="#" class="footer__tel">+38 (048) 795 55 75</a>
+						<address class="footer__address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+					</div>
+
+					<div class="footer__menu">
+						<p class="footer__menu-title">Меню</p>
+						<ul class="footer__menu-list">
+							<li><a href="#" class="active">ForHouse</a></li>
+							<li><a href="#">Строительство</a></li>
+							<li><a href="#">Реконструкция</a></li>
+							<li><a href="#">Проекты</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+
+					<div class="footer__projects">
+						<p class="footer__projects-title">Проекты</p>
+						<div class="footer__projects-list">
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/1.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/2.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/3.jpg');"></a>
+						</div>
+						<a href="#" class="footer__projects-text">Created by Idea-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/proekt.js"></script>
+</body>
+</html>

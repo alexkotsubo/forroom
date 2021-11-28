@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форум компании ForHouse</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nav -->
+
+		<nav class="nav nav_small fixed-padding" id="nav">
+			<div class="nav__body">
+				<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+				<div class="nav__logo">
+					<a class="nav__logo-link" href="#"><img src="img/forhouse-white.png" alt="ForHouse"></a>
+				</div>
+				<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+					<div class="burger__btn">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="burger__bg"></div>
+				
+					<div class="burger__menu">
+						<div class="burger__nav">
+							<div class="burger__close-btn"></div>
+						</div>
+
+						<div class="burger__menu-wrap">
+							<div class="burger__logo">
+								<a href="#" class="burger__logo-link">
+									<img src="img/forhouse-white.png" alt="ForHouse">
+								</a>
+							</div>
+
+							<ul class="burger__list">
+								<li><a href="#" class="burger__link">ForRoom</a></li>
+								<li><a href="#" class="burger__link">Наши Услуги</a></li>
+								<li><a href="#" class="burger__link">Портфолио</a></li>
+								<li><a href="#" class="burger__link">Форум</a></li>
+								<li><a href="#" class="burger__link">Контакты</a></li>
+							</ul>
+
+							<ul class="burger__buttons">
+								<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+								<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+								<li><a href="#" class="burger__buttons-link">Forum</a></li>
+							</ul>
+
+							<ul class="burger__socials">
+								<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Header -->
+
+		<header class="nav-add-margin header header_withhover" id="header">
+			<div class="header__slider">
+				<div class="header__slider-image" style="background-image: url('img/architectural-house.jpg');"></div>
+				<div class="header__slider-image" style="background-image: url('img/kontakty-2.jpg');"></div>
+			</div>
+
+			<div class="header__wrap">
+				<div class="header__content">
+					<div class="container">
+						<h1 class="header__content-title anim-item">Реконструкция</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- House -->
+
+		<section class="house">
+			<div class="container">
+				<div class="house__wrap">
+					<div class="house__slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image: url('img/rekonstrukcija/1.jpg');"></div>
+								<div class="swiper-slide" style="background-image: url('img/rekonstrukcija/2.jpg');"></div>
+							</div>
+						</div>
+					</div>
+					<div class="house__about">
+						<h3 class="house__about-title">Новый - старый дом?</h3>
+						<p class="house__about-text">Объекты недвижимости, возведенные более десятилетия назад, в редких случаях соответствуют современным требованиям по энергоэффективности и зачастую не обеспечивают своих владельцев полнотой комфорта и практичности в повседневной эксплуатации, требуют частичной перестройки, реконструкции, ремонта помещений и модернизации инженерных сетей.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Steps -->
+
+		<section class="steps steps_rekonstrukcija">
+			<div class="steps__steps">
+				<div class="steps__step steps__step_animation steps__step_grey">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-content">
+								<h3 class="steps__step-title">Что можно сделать?</h3>
+								<p class="steps__step-text">Компания специализируется на восстановлении эффективной эксплуатации коттеджей, дачных домов, резиденций, гостиниц и коммерческих объектов. При реконструкции применяются современных технологии в рамках требований ДСТУ и популярные материалы лидеров рынка.</p>
+								<p class="steps__step-text">Наши специалисты разработают проект реконструкции, вплоть до изменения архитектурного стиля, пристройки различного назначения в нескольких уровнях, перекрытия кровли с устройством использования дополнительного пространства, другие постройки — гаражи, бани, беседки, заборы.</p>
+							</div>
+							<div class="steps__step-images">
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/1.jpg');"></div>
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/2.jpeg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gift -->
+
+		<section class="gift gift_consultation gift_customer anim-item">
+			<div class="gift__wrap">
+				<div class="container">
+					<div class="gift__body">
+						<h5 class="gift__body-text">Реконструкция дома за разумные деньги!</h5>
+						<div data-open-popup="call-popup-1" class="btn_transform btn">Получить консультацию</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Steps -->
+
+		<section class="steps steps_rekonstrukcija">
+			<div class="steps__steps">
+				<div class="steps__step steps__step_animation steps__step_animation-reverse">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-content">
+								<h3 class="steps__step-title">Как начать?</h3>
+								<p class="steps__step-text">Диагностика технического состояния объекта, детальный осмотр объекта нашим специалистом и тепловизионная съемка, поможет определить реальные теплопотери и дефекты теплоизоляции, выявление мест намокания и протечек  кровли, потери, неэффективную работу системы отопления и вентиляции, недостатки энергоэффективности остекления, перегрев электропроводки и электрооборудования. В отдельных случая, возможно провести тестирование на герметичность для выявления нарушений норм воздухообмена.</p>
+								<p class="steps__step-text">По итогам будет составлена пояснительная записка с рекомендациями по устранению недостатков или полноценный отчёт с термографиями, результатами измерений и расчетами для реконструкционных мероприятий.</p>
+							</div>
+							<div class="steps__step-images">
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/3.jpg');"></div>
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/4.jpg');"></div>
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/5.jpg');"></div>
+								<div class="steps__step-image" style="background-image: url('img/rekonstrukcija/steps/6.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_medium">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-content">
+								<h3 class="steps__step-title">Сколько стоит?</h3>
+								<p class="steps__step-text">Cтоимость диагностики с выездом на объект — от 500 до 2500 грн, в зависимости от объёма работ и вида требуемой отчетности, для определения более точной стоимости — позвоните нам.</p>
+								<p class="steps__step-text">При заключении договора на реализацию рекомендованных мероприятий, сумма оплаты стоимости диагностики будет исключена из общей стоимости.</p>
+							</div>
+							<div class="steps__step-image ib">
+								<img src="img/rekonstrukcija/steps/7.webp" alt="7" class="ib_use">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="steps__step steps__step_grey-2 steps__step_medium-2 steps__step_medium-2-reverse">
+					<div class="steps__step-container container">
+						<div class="steps__step-wrap">
+							<div class="steps__step-content">
+								<h3 class="steps__step-title">С нами удобно!</h3>
+								<p class="steps__step-text">При реализации проектов по реконструкции частных домов, при необходимости, поможем быстро найти подходящее временное жилье на период работ; предоставим охраняемое складское помещение, с доступом 24/7, для хранения вещей и организуем их перемещение. </p>
+							</div>
+							<div class="steps__step-image ib">
+								<img src="img/rekonstrukcija/steps/8.jpg" alt="8" class="ib_use">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Brands -->
+
+		<section class="brands brands_rekonstrukcija">
+			<div class="container">
+				<h3 class="brands__title">BRANDS</h3>
+				<p class="brands__text">Бренды, с которыми мы работаем</p>
+				<div class="swiper brands__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/віконда.png" alt="1">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/керамейя.png" alt="2">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/крафт.png" alt="3">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/одескабель.png" alt="4">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/оstendorf.png" alt="5">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Паритет.png" alt="6">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Прушиньскі.png" alt="7">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Саган.png" alt="8">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/СБК.png" alt="9">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/эко-пластик.png" alt="10">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/aeroc.png" alt="11">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/anserglob.png" alt="12">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/baumit.png" alt="13">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/braas.png" alt="14">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/ceresit.png" alt="15">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Crh.png" alt="16">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/docke.png" alt="17">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/eskaro.png" alt="18">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/gazobeton-kahovka.png" alt="19">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Wienerberger.png" alt="20">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forhouse/brands/Knauf.png" alt="21">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advantages -->
+
+		<section class="advantages advantages_stroitelstvo">
+			<div class="advantages__container container">
+				<div class="advantages-carts anim-item">
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/1.jpg" alt="1" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/gitn.png" alt="ГИТН">
+							</div>
+							<h5 class="advantages-carts__title">Технадзор</h5>
+							<p class="advantages-carts__text">Сертифицированный независимый технадзор ГИТН</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/2.jpg" alt="2" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/1.png" alt="1">
+							</div>
+							<h5 class="advantages-carts__title">Никаких авансов</h5>
+							<p class="advantages-carts__text">Только поэтапная оплата по факту выполнения работ</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart ib">
+						<img src="img/advantages-images/3.jpg" alt="3" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/2.png" alt="2">
+							</div>
+							<h5 class="advantages-carts__title">Гарантия</h5>
+							<p class="advantages-carts__text">Оформляем договор, устанавливаем сроки и стоимость, предоставляем гарантию на готовый объект</p>
+						</div>
+					</div>
+
+					<div class="advantages-carts__cart advantages-carts__cart_black ib">
+						<img src="img/advantages-images/4.jpg" alt="4" class="ib_use">
+						<div class="advantages-carts__wrap">
+							<div class="advantages-carts__icon">
+								<img src="img/advantages-icons/3.png" alt="3">
+							</div>
+							<h5 class="advantages-carts__title">Поручительство</h5>
+							<p class="advantages-carts__text">Поручительство лидера рынка недвижимости за результаты работы</p>
+							<div id="advantages-lightgallery">
+								<a href="img/IMAGE-2021-02-03-163051.jpg">
+									<div class="btn advantages-carts__btn">Ознакомиться</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Text -->
+
+		<section class="text">
+			<div class="text__container container">
+				<div class="text__body">
+					<div class="text__body-wrap">
+						<p class="p1">Прошло много времени со времен строительства, и вы хотите восстановить дом и дать ему новую жизнь? В компании ForHouse знают, как это сделать наилучшим образом! Ведь устаревшее жилье не только не приносит эстетического удовольствия, но и может быть опасным, поскольку несоответствие нормам может приводить к деформациям и разрушению в дальнейшем. Не такая уж и радужная перспектива, согласитесь?</p>
+						<p class="p2">Какие есть варианты?</p>
+						<p class="p1">Одесская строительная фирма ForHouse предоставляет услуги по реконструкции следующих видов:</p>
+						<ul class="ul1">
+							<li class="li1">Восстановление/перестройка старого дома;</li>
+							<li class="li1">реконструкция половины частного дома;</li>
+							<li class="li1">достройка старой недвижимости;</li>
+							<li class="li1">выполнение реконструкции загородного дома или дачи;</li>
+							<li class="li1">восстановление коммерческих объектов, гостиниц.</li>
+						</ul>
+						<p class="p1">Наши сотрудники восстановят ваше жилище максимально качественно и надежно. Мы вдохнем жизнь в старую постройку, используя высококачественные материалы и современные методы работы. В зависимости от состояния здания, мы можем выполнить:</p>
+						<ul class="ul1">
+							<li class="li1">частичную перестройку;</li>
+							<li class="li1">реконструкцию;</li>
+							<li class="li1">ремонт помещений;</li>
+							<li class="li1">модернизацию инженерных сетей.</li>
+						</ul>
+						<p class="p1">Проконсультируйтесь с нашими менеджерами, которые на основе имеющихся данных помогут определиться со спектром необходимых работ и приступить к реконструкции вашего объекта недвижимости.</p>
+						<p class="p2">Почему стоит обращаться к нам?</p>
+						<p class="p1">Заказывая услуги у ForHouse, вы ощутите ряд преимуществ, которые выделяют нас на фоне конкурентов и делают процесс сотрудничества максимально выгодным и комфортным. О чем речь?</p>
+						<ul class="ul1">
+							<li class="li1">Мы не берем авансы (оплата происходит поэтапно по факту выполненных работ);</li>
+							<li class="li1">проверка качества независимыми экспертами (за правильностью и корректностью работ следит сертифицированный независимый технадзор ГИТН);</li>
+							<li class="li1">гарантия (составляется договор, в котором указываются четкие сроки и фиксированная цена);</li>
+							<li class="li1">забота о клиенте (на время выполнения работ по реконструкции, мы поможем найти подходящее временное жилье, а также предоставим бесплатное охраняемое складское помещение)</li>
+							<li class="li1">поручительство профессионалами (за качественные результаты работы поручается лидер рынка недвижимости).</li>
+						</ul>
+						<p class="p2">Обо всем по порядку</p>
+						<p class="p1">Первым делом вы связываетесь с менеджерами компании (по телефону +38 (048) 795 55 75 или оставляете заявку на сайте www.forroom.com.ua/forhouse) и отправляетесь на консультацию и оформление договора. Далее происходит диагностика технического состояния объекта, в результате которой предоставляется отчёт о явных дефектах (проблемы теплопотери и дефекты теплоизоляции, к примеру), недостатках энергоэффективности и потенциально опасных местах в помещении.</p>
+						<p class="p1">На основе диагностики будет предоставлена пояснительная записка с рекомендациями от специалистов, а также детальный отчет с результатами измерений и расчетами, необходимыми для проведения реставрационных мероприятий. В ходе подготовки вам помогут найти временное жилье, а также предоставят охраняемое складское помещение для вещей и помогут с их перевозкой.</p><p class="p1">Стоимость диагностики с выездом на объект колеблется в районе 500-2500 грн. Цена зависит от объема работ и вида необходимой отчетности. После заключения договора эта сумма будет вычтена из общей стоимости.</p><p class="p2">Подытожим</p>
+						<p class="p1">Чтобы провести качественную реконструкцию старого помещения, следует провести грамотную первичную диагностику, чтобы понимать реальную картину и потом приступать к выполнению работ, необходимых для качественного восстановления постройки с возможностью достройки или перестройки (в зависимости от ваших пожеланий). Реализовать любую техническую задачу и сделать реконструкцию, да еще с гарантией, в Одессе и области может компания ForHouse. С нами вы получаете качество, индивидуальный подход и адекватные цены. Никаких дополнительных трат – только фиксированная цена и высокие стандарты выполненной работы!</p>
+						<p class="p1">Свяжитесь с менеджерами компании по телефону или оставьте заявку на сайте и получите ответы на все интересующие вопросы уже сейчас!</p>
+					</div>
+				</div>
+
+				<div class="text__btns">
+					<div class="text__btns-btn active"><i class="fas fa-chevron-down"></i> Показать</div>
+					<div class="text__btns-btn"><i class="fas fa-chevron-up"></i> Скрыть</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_medium">
+			<div class="footer__container container">
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="footer__logo">
+							<img src="img/forhouse-white.png" alt="forhouse">
+							<p class="footer__logo-text">Строительство и Реконструкция Домов</p>
+						</div>
+
+						<a href="#" class="footer__tel">+38 (048) 795 55 75</a>
+						<address class="footer__address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+					</div>
+
+					<div class="footer__menu">
+						<p class="footer__menu-title">Меню</p>
+						<ul class="footer__menu-list">
+							<li><a href="#" class="active">ForHouse</a></li>
+							<li><a href="#">Строительство</a></li>
+							<li><a href="#">Реконструкция</a></li>
+							<li><a href="#">Проекты</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+
+					<div class="footer__projects">
+						<p class="footer__projects-title">Проекты</p>
+						<div class="footer__projects-list">
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/1.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/2.jpg');"></a>
+							<a href="#" class="footer__project" style="background-image: url('img/forhouse/footer/3.jpg');"></a>
+						</div>
+						<a href="#" class="footer__projects-text">Created by Idea-X</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/rekonstrukcija.js"></script>
+	<script src="js/header-withhover.js"></script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Пакет ремонта "Базовый" компании ForRoom</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+	<meta name="format-detection" content="telephone=no">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b1403d">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	<div class="wrapper">
+		<!-- Dropdown -->
+
+		<div class="dropdown">
+			<ul class="dropdown__content">
+				<li>
+					<div data-open-popup="call-popup-1" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по строительству</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-home"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div data-open-popup="call-popup" class="dropdown__content-link">
+						<p class="dropdown__content-name">Получить консультацию по ремонту</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-paint-roller"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="dropdown__content-link">
+						<p class="dropdown__content-name">Пройти Тест</p>
+						<div class="dropdown__content-icon">
+							<i class="fas fa-clipboard-list"></i>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown__btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call Popup -->
+
+		<div id="call-popup-1" class="call-popup popup">
+			<div class="call-popup__body popup__body" style="background-image: url('img/call-popup-1.jpg');">
+				<div class="call-popup__close popup__close"></div>
+				<div class="call-popup__inner">
+					<form action="#" class="call-popup__form">
+						<h3 class="call-popup__title">Получить Консультацию</h3>
+						<label>
+							<span>ФИО</span>
+							<input type="text" class="block-input block-input_text">
+						</label>
+						<label>
+							<span>Ваш Телефон</span>
+							<input type="tel" class="block-input block-input_tel" placeholder="+38 099 333 22 22" pattern="[0-9()#&+*-=.]+" title="Принимаются только цифры и телефонные символы (#, -, * и т. д.).">
+						</label>
+						<label>
+							<span>Выберите удобный способ связи</span>
+							<div class="block-select">
+								<select>
+									<option value="Телефонный звонок" checked>Телефонный звонок</option>
+									<option value="Telegram">Telegram</option>
+									<option value="WhatsApp">WhatsApp</option>
+									<option value="Viber">Viber</option>
+								</select>
+								<i class="fas fa-sort-down"></i>
+							</div>
+						</label>
+						<button type="submit" class="btn btn_white call-popup__btn">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+
+		<header class="header header_service header_paket" id="header" style="background-image: url('img/design-leather-sofa.jpg');">
+			<div class="header__wrap">
+				<!-- Nav -->
+
+				<nav class="nav nav_small fixed-padding" id="nav">
+					<div class="nav__body">
+						<a href="#" class="nav__home"><i aria-hidden="true" class="fas fa-home"></i></a>
+						<div class="nav__logo">
+							<a class="nav__logo-link" href="#"><img src="img/forroom-white.png" alt="ForRoom"></a>
+						</div>
+						<div class="nav__burger nav__burger_small-text burger" id="nav-burger">
+							<div class="burger__btn">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="burger__bg"></div>
+						
+							<div class="burger__menu">
+								<div class="burger__nav">
+									<div class="burger__close-btn"></div>
+								</div>
+
+								<div class="burger__menu-wrap">
+									<div class="burger__logo">
+										<a href="#" class="burger__logo-link">
+											<img src="img/logo.png" alt="ForRoom">
+										</a>
+									</div>
+
+									<ul class="burger__list">
+										<li><a href="#" class="burger__link">ForRoom</a></li>
+										<li><a href="#" class="burger__link">Наши Услуги</a></li>
+										<li><a href="#" class="burger__link">Портфолио</a></li>
+										<li><a href="#" class="burger__link">Форум</a></li>
+										<li><a href="#" class="burger__link">Контакты ForRoom</a></li>
+									</ul>
+
+									<ul class="burger__buttons">
+										<li><a href="#" class="burger__buttons-link">ForRoom</a></li>
+										<li><a href="#" class="burger__buttons-link">ForHouse</a></li>
+										<li><a href="#" class="burger__buttons-link">Forum</a></li>
+									</ul>
+
+									<ul class="burger__socials">
+										<li><a href="tel:+380487955575" class="burger__socials-link"><i aria-hidden="true" class="fas fa-phone-alt"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#" class="burger__socials-link"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+
+				<div class="header__content nav-add-padding">
+					<div class="container">
+						<div class="header__content-wrap">
+							<div class="header__content-offer">
+								<h2 class="header__content-title anim-item">Пакет Оптимальный</h2>
+								<h3 class="header__content-subtitle anim-item">Пакет ремонта, который включает в себя все работы и материалы пакета "Базовый" и дополнительные опции</h3>
+								<p class="header__content-price">380$ за кв.м.</p>
+								<div data-open-popup="call-popup-1" class="header__content-btn btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+							</div>
+
+							<div class="header__content-image">
+								<div class="header__content-img">
+									<img src="img/forroom/packages/3.jpg" alt="3">
+									<div class="header__dots">
+										<div class="header__dot" style="left: 21%; top: 63%;">
+											<p class="header__dot-text">Кухня под заказ</p>
+											<div class="header__dot-icon">
+												<i aria-hidden="true" class="fas fa-plus"></i>
+											</div>
+										</div>
+
+										<div class="header__dot" style="left: 45%; top: 45%;">
+											<p class="header__dot-text">Кондиционирование</p>
+											<div class="header__dot-icon">
+												<i aria-hidden="true" class="fas fa-plus"></i>
+											</div>
+										</div>
+
+										<div class="header__dot" style="left: 82%; top: 53%;">
+											<p class="header__dot-text">Шторы</p>
+											<div class="header__dot-icon">
+												<i aria-hidden="true" class="fas fa-plus"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Full -->
+
+		<section class="full full_optimalnyj">
+			<div class="container">
+				<div class="full__wrap anim-item">
+					<div class="full__part">
+						<p class="full__part-title">Пакет Базовый</p>
+						<div class="full__part-btn">
+							<a href="#" class="btn btn_transform">Перейти</a>
+						</div>
+					</div>
+
+					<div class="full__part">
+						<ul class="full__part-list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> <a href="#">White BOX*</a></li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Санфаянс</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Натяжные потолки</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Двери</li>
+						</ul>
+					</div>
+
+					<div class="full__part">
+						<ul class="full__part-list">
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Обои</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Ламинат и плитка</li>
+							<li><i aria-hidden="true" class="fas fa-caret-right"></i> Осветительные приборы</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Included -->
+
+		<section class="included included_optimalnyj">
+			<div class="container">
+				<h2 class="included__title">ОПТИМАЛЬНЫЙ</h2>
+				<p class="included__text anim-item">Дополнительно входит:</p>
+				<div class="included__carts">
+					<div class="included__cart">
+						<img src="img/included-icons/1.png" alt="1">
+						<span class="included__cart-text">Предчерновые работы</span>
+					</div>
+
+					<div class="included__cart">
+						<img src="img/included-icons/2.png" alt="2">
+						<span class="included__cart-text">Черновые работы</span>
+					</div>
+
+					<div class="included__cart">
+						<img src="img/included-icons/3.png" alt="3">
+						<span class="included__cart-text">Электромонтажные работы</span>
+					</div>
+
+					<div class="included__cart">
+						<img src="img/included-icons/4.png" alt="4">
+						<span class="included__cart-text">Сантехнические работы</span>
+					</div>
+
+					<div class="included__cart">
+						<img src="img/included-icons/5.png" alt="5">
+						<span class="included__cart-text">Вентиляция</span>
+					</div>
+
+					<div class="included__cart">
+						<img src="img/included-icons/6.png" alt="6">
+						<span class="included__cart-text">Малярные работы</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Things -->
+
+		<section class="things">
+			<div class="container">
+				<div class="things__wrap">
+					<div class="things__btns">
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Кухня под заказ</span>
+						</div>
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Дизайнерские шторы</span>
+						</div>
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Кондиционеры</span>
+						</div>
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Электрический Бойлер</span>
+						</div>
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Зеркало с led подсветкой</span>
+						</div>
+						<div class="things__btn">
+							<i aria-hidden="true" class="fas fa-arrow-circle-right"></i>
+							<span>Электрический полотенцесушитель</span>
+						</div>
+					</div>
+
+					<div class="things__images">
+						<div class="things__image">
+							<img src="img/optimalnyj/1.webp" alt="1">
+						</div>
+						<div class="things__image">
+							<img src="img/optimalnyj/2.webp" alt="2">
+						</div>
+						<div class="things__image">
+							<img src="img/optimalnyj/3.webp" alt="3">
+						</div>
+						<div class="things__image">
+							<img src="img/optimalnyj/4.webp" alt="4">
+						</div>
+						<div class="things__image">
+							<img src="img/optimalnyj/5.jpg" alt="5">
+						</div>
+						<div class="things__image">
+							<img src="img/optimalnyj/6.jpg" alt="6">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Operation -->
+
+		<section class="operation">
+			<div class="operation__operation operation__operation_7">
+				<div class="operation__operation-wrap">
+					<div class="container">
+						<div class="operation__operation-inner">
+							<div class="operation__operation-about">
+								<h4 class="operation__operation-title anim-item">Сопутствующие услуги</h4>
+								<div class="operation__operation-texts">
+									<div class="operation__operation-part">
+										<div class="operation__text anim-item">
+											<i aria-hidden="true" class="fas fa-check"></i>
+											<div class="operation__text-body">
+												<h5 class="operation__text-title">Менеджмент и контроль качества</h5>
+												<p class="operation__text-text">К каждому объекту прикреплен: личный менеджер/ дизайнер/руководитель проекта.</p>
+											</div>
+										</div>
+										<div class="operation__text anim-item">
+											<i aria-hidden="true" class="fas fa-check"></i>
+											<div class="operation__text-body">
+												<h5 class="operation__text-title">Закупка материалов, хранение на складе и своевременная доставка</h5>
+												<p class="operation__text-text">Клининг по окончанию работ.</p>
+											</div>
+										</div>
+										<div class="operation__text anim-item">
+											<i aria-hidden="true" class="fas fa-check"></i>
+											<div class="operation__text-body">
+												<h5 class="operation__text-title">Чистовая уборка при завершении работ</h5>
+												<p class="operation__text-text">Подвод гибкой вентиляционного гофры под вытяжку.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="operation__operation-part">
+										<div class="operation__text anim-item">
+											<i aria-hidden="true" class="fas fa-check"></i>
+											<div class="operation__text-body">
+												<h5 class="operation__text-title">Контроль качества инженером технического надзора</h5>
+												<p class="operation__text-text">Сопровождение и сдача всех этапов проведения работ технадзором.</p>
+											</div>
+										</div>
+										<div class="operation__text anim-item">
+											<i aria-hidden="true" class="fas fa-check"></i>
+											<div class="operation__text-body">
+												<h5 class="operation__text-title">Пакет исполнительной документации</h5>
+												<p class="operation__text-text">Полный пакет чертежей.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Brands -->
+
+		<section class="brands brands_forroom">
+			<div class="container">
+				<h3 class="brands__title">BRANDS</h3>
+				<p class="brands__text">Мы являемся дилером более 5000 отделочных материалов от ведущих производителей</p>
+				<div class="swiper brands__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/rehau.png" alt="1">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/plastolit.png" alt="2">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/philips-1.png" alt="3">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/osram.png" alt="4">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/marburg.png" alt="5">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/logo.png" alt="6">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/hager.png" alt="7">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/grohe.png" alt="8">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/blum.png" alt="9">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/schneider-electric.png" alt="10">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/rooms.png" alt="11">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/nowodvorski.png" alt="12">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/my-floor.png" alt="13">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/maytoni.png" alt="14">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/imprese.png" alt="15">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/erismann.png" alt="16">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/eglo.png" alt="17">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/egger.png" alt="18">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/agt.png" alt="19">
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+								<div class="brands__slider-wrap">
+								<img src="img/forroom/brands/a.s._creation.png" alt="20">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Plus -->
+
+		<section class="plus">
+			<div class="container">
+				<h2 class="plus__title">Наши <span>Преимущества</span></h2>
+				
+				<div class="plus__carts">
+					<div class="plus__cart">
+						<div class="plus__cart-wrap">
+							<div class="plus__cart-image">
+								<div class="plus__cart-img ib">
+									<img src="img/plus/1.jpg" alt="1" class="ib_use">
+								</div>
+							</div>
+							<div class="plus__cart-body">
+								<div class="plus__cart-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_x31_" x="0px" y="0px" viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+										<style type="text/css">
+											.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#AF3A36;}
+										</style>
+										<path class="st0" d="M127.5,189.9C132.8,198.2,131.6,196.3,127.5,189.9L127.5,189.9L127.5,189.9z M194.6,137.3h5  c1.1,0,1.9,0.9,1.9,1.9v5c0,1.1-0.9,1.9-1.9,1.9h-5c-1.1,0-1.9-0.9-1.9-1.9v-5C192.6,138.2,193.5,137.3,194.6,137.3L194.6,137.3z   M101.5,149.3c15,5.6,25.7,19.8,26.1,36.7c0.4,0.3,0.9,0.5,1.5,0.5h83.6v-27.1h-25.5c-3.7,0-6.8-1.7-9.5-4.1  c-4.8-4.2-4.9-10.9-4.9-16.6c0-4.4,3.3-10.1,8.6-12.9c4.9-2.6,23.2-1.4,31.2-1.4V97.3c-39.8,0-79.6,0-119.5,0  c-2.7,0-3.1-0.6-5.6-0.8v50.2l0.5,0.1C92.8,146.9,97.3,147.8,101.5,149.3C95.3,139.7,96.8,142,101.5,149.3L101.5,149.3z   M127.1,192.9c-2.9,19.3-19.5,34.1-39.7,34.1c-22.2,0-40.1-18-40.1-40.1c0-19.7,14.2-36.1,33-39.5c0.6-0.5,0.9-1.2,0.9-2.3V96.5  l-0.1-5.7c0.5-5.6-1.7-11.3,3.5-16.5c5.7-5.6,13.1-4.1,23.7-4.1c14.8,0,11.4,1.6,17.2-4.3c0.7-0.7,0.9-0.9,1.6-1.6  c0.1-0.1,0.3-0.3,0.4-0.4l2.4-2.4c14.2-14.2,12.1-15.1,21.1-6.1l8.8,8.8c1.1,1.1,1.2,1.2,2.4,2.4c0.3,0.3,2.3,2.4,2.3,2.4  c4.3,3.3,35.8,0,39.2,1.4l2.6,2.2v17.5l2.3,0.4c6.6,0.8,12.1-2.5,12.1,6.8v89.2c0,2.7,0,3.1-0.2,5.6  C212.3,193.5,142.6,192.9,127.1,192.9L127.1,192.9z M180.1,142.7c0,3.9,1.1,6.6,3.7,8.3c2,1.3,5.9,2.1,9,2.1  c11.5,0,19.9,1.8,19.9-2.4c0-11.5,1.8-19.9-2.4-19.9C190.8,130.8,180.1,127.6,180.1,142.7L180.1,142.7z M111.6,91l50.2-0.1  c8.3-0.5,18.4,3.8,8.3-6.6l-22.7-22.7c-2.1-2.1-1.2-1.8-3.9-3.2l-23.6,23.4C114.8,86.8,112.5,88.5,111.6,91L111.6,91z M173.7,77.4  c2.1,3.9,11.4,13.5,13.5,13.5c8.2,0,11.9,1.1,11.9-2.4c0-13.6,1.4-11.2-11.9-11.2C182.7,77.4,178.2,77.4,173.7,77.4L173.7,77.4z   M100.4,91c1.8,0,1.8-0.8,4.1-3.1l4-4c0.1-0.1,0.3-0.3,0.4-0.4l1.6-1.6c1.5-1.5,2.7-2.3,3.5-4.5c-5.6,0-11.2-0.1-16.8,0  c-13,0.1-10.1,8.9-7.3,11.4C93.2,91.7,95.5,91,100.4,91L100.4,91z M87.4,153.1c18.8,0,34,15.2,34,34c0,18.8-15.2,34-34,34  c-18.8,0-34-15.2-34-34C53.5,168.3,68.7,153.1,87.4,153.1z"></path>
+										<path class="st0" d="M84.2,164.2v4.7c-0.9,0-2.8,0.8-3.5,1.1c-2,1-3.8,2.6-4.8,4.7c-1.2,2.3-1.2,5.2-0.2,7.6  c0.3,0.7,0.7,1.3,1.2,1.9c0.2,0.2,0.3,0.4,0.5,0.6l0.5,0.5c0.7,0.6,1.5,1.2,2.4,1.7c2.2,1.3,4.7,2.2,7.1,3.2c1,0.4,2.5,1.1,3.4,1.8  c0.7,0.6,1.5,1.6,1.5,2.6c0,1.5-0.5,2.5-1.6,3.3c-1.8,1.4-4.5,1.3-6.6,0.7c-1-0.3-1.8-0.7-2.7-1.1c-1-0.5-1.8-1.2-2.7-1.9  c-0.1-0.1-0.3-0.3-0.5-0.3c-0.8,0-1.1,0.8-1.5,1.3l-1.9,2.5c-0.2,0.3-0.3,0.6-0.1,1c0,0.1,0.1,0.1,0.1,0.2c0.7,0.9,2.1,1.8,3.1,2.4  c1.3,0.8,2.6,1.3,4.1,1.8c0.4,0.1,0.8,0.2,1.1,0.3c0.2,0,0.4,0.1,0.6,0.1c0.2,0,0.5,0.1,0.7,0.1c0,0.7-0.1,4.1,0,4.6  c0,0.4,0.3,0.8,0.8,0.8h3.8c0.2,0,0.4-0.1,0.5-0.3c0.4-0.4,0.2-1.5,0.2-2.1c0-1,0-2,0-3.1c0.3-0.1,0.7-0.1,1-0.2  c1.6-0.3,3.4-1.2,4.6-2.2c1.2-1.1,2.3-2.3,2.9-3.8c1.2-2.7,1.2-6.4-0.5-8.9c-0.6-0.9-1.4-1.6-2.3-2.3c-0.5-0.4-1-0.7-1.6-1L93,186  c-1.6-0.8-3.3-1.5-5-2.1c-1-0.4-1.9-0.8-2.9-1.2l-0.7-0.3c-0.3-0.2-0.6-0.4-0.9-0.6c-0.1-0.1-0.2-0.1-0.3-0.2  c-0.9-0.8-1.4-1.4-1.4-2.8c0-0.7,0.3-1.3,0.5-1.8c0.3-0.5,0.7-0.8,1.2-1.1l0.7-0.4c1.7-0.8,3.8-0.8,5.6-0.3c0.4,0.1,0.7,0.2,1,0.3  c1.1,0.4,2.4,1.1,3.3,1.8c0.3,0.3,0.6,0.5,1,0.5c0.6,0,0.8-0.5,1-0.9c0.3-0.5,2-3.5,2-3.8c0-0.9-2.9-2.5-3.5-2.8  c-1.2-0.6-3.7-1.4-5-1.4v-4.7c0-0.4-0.3-0.8-0.7-0.8H85C84.6,163.4,84.2,163.8,84.2,164.2z"></path>
+									</svg>
+								</div>
+								<h4 class="plus__cart-title">Фиксированная итоговая цена</h4>
+								<p class="plus__cart-text">Фиксированная итоговая цена известна до начала работ. Никаких “раздутых смет” - только оговоренные расходы.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="plus__cart">
+						<div class="plus__cart-wrap">
+							<div class="plus__cart-image">
+								<div class="plus__cart-img ib">
+									<img src="img/plus/2.jpg" alt="2" class="ib_use">
+								</div>
+							</div>
+							<div class="plus__cart-body">
+								<div class="plus__cart-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_x31_" x="0px" y="0px" viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+										<style type="text/css">
+											.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#AF3A36;}
+										</style>
+										<path class="st0" d="M116.8,67.5c11.8,0,17.7-11.6,24.9-11.6c7.2,0,13.1,11.6,24.9,11.6c1.9,0.3,10.3-0.9,12.9-1  c6.1-0.3,8,3.2,10.3,8.6c5.2,12,5.9,13.3,18.4,18.5c12.3,5.1,8.3,9.2,7.7,22.9c-0.1,3.1,0.5,5.6,1.6,8l5.5,8.1  c1.3,1.4,0.9,1.2,1.8,2.7c1.1,1.7,2.6,3.7,2.7,6.4c0.1,7.4-11.6,13-11.5,24.9c-0.3,1.8,0.9,10.3,1,12.9c0.3,6.7-4.4,8.5-8.9,10.4  c-13.3,5.7-12.8,6.4-18.3,18.6c-2.1,4.6-3.7,8.6-9.9,8.5c-2,0.2-10.5-1-13.3-1c-6,0-9.7,2.4-13.4,5.2c-12.2,9.1-11.5,8.3-23.4-0.3  c-3.3-2.4-7.8-5.5-13.4-5c-14.7,1.2-17.6,4-22.8-7.3c-5.6-12.2-4.8-12.8-18.3-18.6c-12.4-5.3-8.5-9.2-7.9-23.1  c0.5-11.6-11.6-17.9-11.5-25.2c0.1-7.5,11.5-12.9,11.5-24.6c0.2-3.1-0.9-9.7-1-13.3C66,92.8,79.6,94.4,87,86.9  c5-5.1,6.1-13.3,9.9-17.9C100.9,64.2,110.2,67.5,116.8,67.5L116.8,67.5z M118.9,73.7c-6.1,0-14.6-3-18.2,1.4  c-3.5,4.2-4.5,11.7-9.1,16.4c-6.8,6.9-19.3,5.4-18.8,15.4c0.1,3.3,1.1,9.3,0.9,12.2c0,10.8-10.5,15.7-10.6,22.5  c-0.1,6.7,11,12.5,10.6,23.1c-0.5,12.7-4.2,16.2,7.2,21.1c12.3,5.3,11.6,5.8,16.8,17c4.8,10.4,7.5,7.8,20.9,6.7  c5.1-0.4,9.2,2.5,12.2,4.6c10.9,7.8,10.3,8.6,21.4,0.3c3.4-2.5,6.8-4.7,12.3-4.7c2.6,0,10.3,1.1,12.2,1c5.7,0,7.1-3.6,9.1-7.8  c5.1-11.2,4.6-11.8,16.8-17c4.1-1.8,8.4-3.4,8.1-9.6c-0.1-2.4-1.2-10.2-0.9-11.9c0-10.9,10.7-16.1,10.6-22.8c0-2.5-1.4-4.3-2.4-5.9  c-0.9-1.4-0.5-1.2-1.7-2.5l-5-7.4c-1-2.2-1.6-4.5-1.4-7.3c0.5-12.5,4.2-16.2-7.1-20.9c-11.4-4.8-12.1-6-16.9-17  c-2.1-4.9-3.8-8.1-9.4-7.8c-2.4,0.1-10.2,1.2-11.9,1c-10.8,0-16.2-10.7-22.8-10.7C135.1,63,129.7,73.7,118.9,73.7L118.9,73.7z   M91.5,144c0.2,1.6,0.1,4.1,0.6,5.6c0.5,1.7,0.7,3.7,1.1,5.3c5.6,21.5,26.1,37.8,50.9,37c43.5-1.4,64.7-56.4,31.7-86.9  c-17.9-16.5-44.2-17.9-64.3-3.2c-2.5,1.8-4.3,3.6-6.5,5.9C96.6,116.5,90.3,131.4,91.5,144L91.5,144z M137.7,84.7  c-9,1.1-14.3,1.9-22.5,6.2c-6.1,3.2-11.3,7.3-16.1,12.5c-20.8,22.5-19.3,60.2,4.3,80.9c5.3,4.6,10.3,7.9,17.7,10.9  c9,3.7,21.4,4.6,30.8,2.9c45.8-8.5,63.8-66.1,28.1-98.8C171.2,91,154.5,82.7,137.7,84.7L137.7,84.7z M123.1,147.2v-29.5h-4.6  c-0.6,1.8-1.8,3.4-3.5,4.7c-1.7,1.3-3.3,2.3-4.8,2.7v5.1c2.8-0.9,5.2-2.4,7.3-4.3v21.3H123.1L123.1,147.2z M141.1,117.6  c-2.8,0-5.1,1-6.7,3c-1.9,2.4-2.9,6.4-2.9,12c0,5.6,0.9,9.6,2.6,11.8c1.8,2.2,4.1,3.3,6.9,3.3c2.8,0,5.1-1,6.7-3  c1.9-2.4,2.9-6.4,2.9-12c0-5.6-1-9.6-2.9-12C146.1,118.7,143.9,117.6,141.1,117.6L141.1,117.6z M141.1,122.3c-0.7,0-1.3,0.2-1.8,0.7  c-0.5,0.4-0.9,1.2-1.2,2.3c-0.4,1.5-0.6,3.9-0.6,7.4c0,3.5,0.2,5.8,0.5,7.1c0.3,1.3,0.8,2.2,1.3,2.6c0.5,0.4,1.1,0.6,1.8,0.6  c0.7,0,1.3-0.2,1.8-0.7c0.5-0.4,0.9-1.2,1.2-2.3c0.4-1.4,0.6-3.9,0.6-7.4c0-3.5-0.2-5.8-0.5-7.1c-0.3-1.3-0.8-2.2-1.3-2.6  C142.3,122.5,141.7,122.3,141.1,122.3L141.1,122.3z M163.9,117.6c-2.8,0-5.1,1-6.7,3c-1.9,2.4-2.9,6.4-2.9,12  c0,5.6,0.9,9.6,2.6,11.8c1.8,2.2,4.1,3.3,6.9,3.3c2.8,0,5.1-1,6.7-3c1.9-2.4,2.9-6.4,2.9-12c0-5.6-1-9.6-2.9-12  C168.9,118.7,166.7,117.6,163.9,117.6L163.9,117.6z M163.9,122.3c-0.7,0-1.3,0.2-1.8,0.7c-0.5,0.4-0.9,1.2-1.2,2.3  c-0.4,1.5-0.6,3.9-0.6,7.4c0,3.5,0.2,5.8,0.5,7.1c0.3,1.3,0.8,2.2,1.3,2.6c0.5,0.4,1.1,0.6,1.8,0.6c0.7,0,1.3-0.2,1.8-0.7  c0.5-0.4,0.9-1.2,1.2-2.3c0.4-1.4,0.6-3.9,0.6-7.4c0-3.5-0.2-5.8-0.5-7.1c-0.3-1.3-0.8-2.2-1.3-2.6  C165.1,122.5,164.5,122.3,163.9,122.3L163.9,122.3z M128.5,157.4c0,2,0.5,3.5,1.6,4.5c1.1,1,2.6,1.5,4.5,1.5c1.9,0,3.3-0.5,4.4-1.5  s1.6-2.5,1.6-4.5c0-2-0.5-3.5-1.6-4.5c-1.1-1-2.6-1.5-4.5-1.5c-1.9,0-3.3,0.5-4.4,1.5C129,153.8,128.5,155.3,128.5,157.4  L128.5,157.4z M132.6,157.4c0,1.5,0.2,2.4,0.6,2.9c0.3,0.4,0.8,0.6,1.3,0.6c0.6,0,1-0.2,1.3-0.6c0.4-0.5,0.6-1.5,0.6-2.9  s-0.2-2.4-0.6-2.9c-0.3-0.4-0.8-0.6-1.3-0.6c-0.6,0-1,0.2-1.3,0.6C132.8,154.9,132.6,155.9,132.6,157.4L132.6,157.4z M138.5,175.3  l14.6-23.9h-3.8l-14.7,23.9H138.5L138.5,175.3z M147.1,169.4c0,2,0.5,3.5,1.6,4.5c1.1,1,2.6,1.5,4.5,1.5c1.9,0,3.3-0.5,4.4-1.5  c1.1-1,1.6-2.5,1.6-4.5c0-2-0.5-3.5-1.6-4.5c-1.1-1-2.6-1.5-4.5-1.5c-1.9,0-3.4,0.5-4.4,1.5C147.6,165.8,147.1,167.3,147.1,169.4  L147.1,169.4z M151.2,169.4c0,1.5,0.2,2.5,0.6,2.9c0.3,0.4,0.7,0.6,1.3,0.6c0.6,0,1-0.2,1.3-0.6c0.4-0.5,0.6-1.5,0.6-3  c0-1.5-0.2-2.5-0.6-3c-0.3-0.4-0.8-0.6-1.3-0.6c-0.6,0-1,0.2-1.3,0.6C151.4,166.9,151.2,167.9,151.2,169.4z"></path>
+									</svg>
+								</div>
+								<h4 class="plus__cart-title">Мы несём 100% ответственность</h4>
+								<ul class="plus__cart-list">
+									<li>Гарантийный сертификат на 5 лет.</li>
+									<li>Поручительство АН “Атланта” на сумму ремонта.</li>
+									<li>Штрафные санкции. Возвращаем 25 $ за каждый день просрочки.</li>
+								</ul>
+								<div class="plus__cart-btn" id="advantages-lightgallery">
+									<a href="img/IMAGE-2021-02-03-163051.jpg">
+										<div class="btn">Ознакомиться</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="plus__cart">
+						<div class="plus__cart-wrap">
+							<div class="plus__cart-image">
+								<div class="plus__cart-img ib">
+									<img src="img/plus/3.jpg" alt="3" class="ib_use">
+								</div>
+							</div>
+							<div class="plus__cart-body">
+								<div class="plus__cart-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_x31_" x="0px" y="0px" viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+										<style type="text/css">
+											.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#AF3A36;}
+										</style>
+										<g>
+											<path class="st0" d="M79.5,93h2v5h-0.4c-8.4,0-10.4,5-10.4,11.2v75.3H64V108C64,99.8,68.3,93,79.5,93z"></path>
+											<path class="st0" d="M210.8,93h-2v5h0.4c8.4,0,10.4,5,10.4,11.2v75.3h6.7V108C226.3,99.8,222,93,210.8,93z"></path>
+											<path class="st0" d="M137.6,86.3l15.5,0.1l0,80.7l-15.3,0.3L137.6,86.3L137.6,86.3z M193.5,81.2c-0.1,0-0.2,0-0.2,0L174.1,81   c3.4-8.7,3-20.1-7.9-22.9c-13.7-3.5-17.7,10.1-21.2,13.6c-6.9-6.6-8.6-22.5-25.9-19c-5.5,1.1-10.3,6.1-11.9,10.6   c-2.6,7.3,0.8,12.7,2.9,17.5c-5.3,0.4-9,0.4-11.6,0.6c-0.2-0.1-0.4-0.2-0.6-0.2h-4.4c-0.5,0-0.9,0.4-0.9,0.9v26v4.4v0   c0,0.5,0.4,0.9,0.9,0.9h4.4c0.1,0,0.1,0,0.2,0c0.1,0.1,0.2,0.1,0.3,0.2c-0.4,12.7-0.1,25.8-0.1,38.5c0,23.4-4.5,20.4,18.4,20.4   c12,0,68.5,1.8,74.8-0.8c3.5-7.5,0.4-46.1,1.2-58.1c0.1-0.1,0.2-0.1,0.3-0.2h0.5c0.1,0,0.2,0,0.2,0h4.4c0.5,0,0.9-0.4,0.9-0.9V82.2   c0-0.5-0.4-0.9-0.9-0.9H193.5L193.5,81.2z M187.2,113.5l-0.1,54l-28.4,0.1l-0.3-55l0-26.2l34.1,0.1l0.1,20.6   c-8,0.3-17.7,0.2-26,0.2c-0.5,0-0.9,0.4-0.9,0.9v4.4c0,0.5,0.4,0.9,0.9,0.9H187.2L187.2,113.5z M98.8,86.6l33.4-0.2   c-0.1,11.9-0.2,75-0.1,80.6c-7.8,0.5-20.2,0-27.9,0.2l-0.6-53.7h20.2c0.5,0,0.9-0.4,0.9-0.9v-4.4c0-0.5-0.4-0.9-0.9-0.9   c-7.1,0-18.5,0.2-25.1-0.4V86.6L98.8,86.6z M149.4,80.3c-2.4-6,10-25.1,19.5-14.4C179.1,77.2,160.3,85,149.4,80.3L149.4,80.3z    M142.8,81c-6.8,0.2-20.8,1.4-25.9-1.6c-6.3-3.7-7.3-12.6-2.5-17.8C127.3,47.5,139.9,72.3,142.8,81z"></path>
+											<path class="st0" d="M167.6,201.5l55.6,0c-3.4,14.1-19.7,10.4-34.1,10.4h-88.4c-13.2,0-28.7,3.8-33.4-10.1   c10.4-0.7,21.8-0.3,32.3-0.3c3.4,0,21-0.7,23.3,0.6c0.9,0.5,2.8,4.2,2.8,4.3l38.5,0c0.7-0.9,1.3-1.7,1.9-2.5c0.2-0.2,0.9-0.9,1-1.4   C167.1,202,167.4,201.9,167.6,201.5L167.6,201.5z M228.2,196.9c-7.1-1.9-54.8-1-65.2-0.6c-2.9,3.5-1,0.9-2.3,5.3l-30.7-0.1l-2.1-5   c-9.5-1.1-38.9-0.3-52.1-0.3c-11.5-0.1-13.2-1.6-14,3.5c-1.5,9.7,9.7,16.7,17.5,17.3l102,0.1C194.8,217,234.3,222.6,228.2,196.9z"></path>
+										</g>
+									</svg>
+								</div>
+								<h4 class="plus__cart-title">Дизайн в подарок</h4>
+								<p class="plus__cart-text">Наш дизайнер спроектирует для Вас индивидуальный дизайн основываясь на ваших предпочтениях и поможет выбрать финишные материалы для создания неповторимого образа Вашему жилью.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="plus__cart">
+						<div class="plus__cart-wrap">
+							<div class="plus__cart-image">
+								<div class="plus__cart-img ib">
+									<img src="img/plus/4.jpg" alt="4" class="ib_use">
+								</div>
+							</div>
+							<div class="plus__cart-body">
+								<div class="plus__cart-icon">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_x31_" x="0px" y="0px" viewBox="0 0 283.5 283.5" style="enable-background:new 0 0 283.5 283.5;" xml:space="preserve">
+										<style type="text/css">
+											.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#AF3A36;}
+										</style>
+										<path class="st0" d="M81,169.6h27.5c1.9,0,3.4,1.5,3.4,3.4v0c0,1.9-1.5,3.4-3.4,3.4H81c-1.9,0-3.4-1.5-3.4-3.4v0  C77.6,171.1,79.1,169.6,81,169.6L81,169.6z M200.3,104.4h5.3c1.9,0,3.4,1.5,3.4,3.4v0c0,1.9-1.5,3.4-3.4,3.4h-5.3  c-1.9,0-3.4-1.5-3.4-3.4v0C196.9,105.9,198.4,104.4,200.3,104.4L200.3,104.4z M112.8,90.9H205c1.9,0,3.4,1.5,3.4,3.4v0  c0,1.9-1.5,3.4-3.4,3.4h-92.3c-1.9,0-3.4-1.5-3.4-3.4v0C109.4,92.4,110.9,90.9,112.8,90.9L112.8,90.9z M150.4,154.6  c3,0,5.8,1.1,7.8,3c2.1-1.9,4.8-3,7.8-3c6.5,0,11.8,5.3,11.8,11.8c0,6.5-5.3,11.8-11.8,11.8c-3,0-5.8-1.1-7.8-3  c-2.1,1.9-4.8,3-7.8,3c-6.5,0-11.8-5.3-11.8-11.8C138.5,159.9,143.8,154.6,150.4,154.6L150.4,154.6z M166.4,161.2  c-2.9,0-5.2,2.3-5.2,5.2c0,2.9,2.3,5.2,5.2,5.2c2.9,0,5.2-2.3,5.2-5.2C171.6,163.6,169.3,161.2,166.4,161.2L166.4,161.2z   M149.9,161.2c-2.9,0-5.2,2.3-5.2,5.2c0,2.9,2.3,5.2,5.2,5.2c2.9,0,5.2-2.3,5.2-5.2C155.1,163.6,152.8,161.2,149.9,161.2  L149.9,161.2z M160,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0  C161.1,145.4,160,144.3,160,143L160,143z M173.7,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3  c0,1.4-1.1,2.5-2.5,2.5l0,0C174.8,145.4,173.7,144.3,173.7,143L173.7,143z M132.7,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0  c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0C133.8,145.4,132.7,144.3,132.7,143L132.7,143z M146.4,143v-8.3  c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0C147.5,145.4,146.4,144.3,146.4,143L146.4,143z   M105.1,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0  C106.2,145.4,105.1,144.3,105.1,143L105.1,143z M118.8,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3  c0,1.4-1.1,2.5-2.5,2.5l0,0C120,145.4,118.8,144.3,118.8,143L118.8,143z M77.8,143v-8.3c0-1.4,1.1-2.5,2.5-2.5l0,0  c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0C78.9,145.4,77.8,144.3,77.8,143L77.8,143z M91.5,143v-8.3  c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5v8.3c0,1.4-1.1,2.5-2.5,2.5l0,0C92.6,145.4,91.5,144.3,91.5,143L91.5,143z   M80.4,157.5h48.5c1.9,0,3.4,1.5,3.4,3.4v0c0,1.9-1.5,3.4-3.4,3.4H80.4c-1.9,0-3.4-1.5-3.4-3.4v0C77.1,159,78.6,157.5,80.4,157.5  L80.4,157.5z M95.5,98.3l4.6,0c6.2-18.9-14.2-17.5,44-17.5c20.7,0,41.4,0.1,62.1,0c14.5-0.1,12,4.4,12,17.8c0,10.3,0,20.7,0,31  c0,14.2,2.5,22.6-7.8,23c-3.5,0.1-12.2-1.4-10.1,4.4c1.3,3.6,10.7,2.5,14.2,1.8c9.9-2,9.8-10.6,9.8-20.8c0-10.3,0-20.7,0-31  c0-8.9,1.9-22.8-3.2-28.3c-5.9-6.4-16.7-4.4-26.6-4.4c-8.6,0-87.6-0.9-92.2,1C93.3,79.1,94.5,88.7,95.5,98.3L95.5,98.3z   M182.9,106.9l-84.7-0.2v0H98l-0.9,0l0,0H89l0-0.1l-5.1,0.1h-3.2v0l-8.6,0.1c-12.2,3.9-9.4,16.7-9.4,29.5c0,52.5-4.9,55,23.6,55  h79.6c31.2,0,26.2-0.4,26.2-53.3C192.1,124.7,195.2,110.6,182.9,106.9L182.9,106.9z M98.2,112.6L98.2,112.6l-13.3,0  c-14.3,0.8-15.9-2.6-15.8,14.4c0,5.6,0,11.2,0,16.8c0.2,47-6.5,41,26.4,41c22.2,0,63,0.9,83,0c6.2-0.3,7.3-3,7.4-9.1l0-50.4  c0.1-12.3-1.5-12.8-13.2-12.8L98.2,112.6z"></path>
+									</svg>
+								</div>
+								<h4 class="plus__cart-title">Кредитование</h4>
+								<p class="plus__cart-text">Наш кредитный эксперт предложит Вам наилучший вариант кредитования под ремонт, строительство или реконструкцию.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gift -->
+
+		<section class="gift gift_service">
+			<div class="gift__wrap">
+				<div class="container">
+					<div class="gift__body">
+						<div class="gift__body-content anim-item">
+							<h5 class="gift__body-title">Готовы делать ремонт?</h5>
+							<p class="gift__body-text">Выберите пакет и получите дизайн-проект в подарок</p>
+						</div>
+						<div class="gift__body-btn">
+							<div data-open-popup="call-popup" class="btn_transform btn">Получить консультацию</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+
+		<section class="portfolio portfolio_page portfolio_service">
+			<div class="container">
+				<div class="portfolio__title">
+					<h2 class="portfolio__title-title">PORTFOLIO</h2>
+					<p class="portfolio__title-text">Наши Работы</p>
+				</div>
+
+				<div class="portfolio__btns">
+					<div class="portfolio__btns">
+						<p class="portfolio__btns-btn">Все</p>
+						<p class="portfolio__btns-btn">Дизайн</p>
+						<p class="portfolio__btns-btn">Ремонт</p>
+					</div>
+				</div>
+
+				<div class="portfolio__tabs">
+					<div class="portfolio__tab">
+						<div class="portfolio__tab-wrap">
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="portfolio__tab">
+						<div class="portfolio__tab-wrap">
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="portfolio__tab">
+						<div class="portfolio__tab-wrap">
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+
+							<a href="#" class="portfolio__cart">
+								<span class="portfolio__cart-wrap" style="background-image: url('img/forroom/portfolio/1.jpeg');">
+									<span class="portfolio__cart-content">
+										<p class="portfolio__cart-title">ЖК Таировские сады</p>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio__btn">
+					<a href="#" class="btn btn_transform">Подробнее</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Design -->
+
+		<section class="design design_service">
+			<iframe scrolling="no" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen="true" style="border: medium none; background-color: rgb(0, 0, 0); max-width: 100%; width: 100%; height: 640px;" src="https://kuula.co/share/collection/7Y2Gl?fs=1&amp;vr=0&amp;sd=1&amp;autorotate=-0.12&amp;autop=10&amp;thumbs=0&amp;inst=0&amp;info=1&amp;logo=1&amp;enablejs=1&amp;priority=1" data-gtm-yt-inspected-1_19="true" frameborder="0"></iframe> 
+			<div class="design__info">
+				<div class="design__info-wrap">
+					<h3 class="design__info-title">Выберите свой дизайн квартиры</h3>
+					<p class="design__info-text">Four rooms — это дизайнерский ремонт вашей квартиры под ключ!</p>
+					<p class="design__info-text">Каждый из наших пакетов ремонта: “Базовый”, “Оптимальный”, “Максимальный” можно выбрать в четырех представленных стилях: Лофт, Минимализм, Скандинавский, Современный.</p>
+					<a href="#" class="design__info-btn btn btn_transform">Посмотреть стили</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer footer_big">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__photos">
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/1.jpg');"></div>
+								<span class="footer__photo-title">ЖК Миконос</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/2.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Таировские-сады</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/3.jpg');"></div>
+								<span class="footer__photo-title">ЖК-4-Сезона</span>
+							</div>
+						</a>
+
+						<a href="#" class="footer__photo">
+							<div class="footer__photo-wrap">
+								<div class="footer__photo-img" style="background-image: url('img/forroom/footer-gallery/4.jpg');"></div>
+								<span class="footer__photo-title">ЖК-Элегия-Парк</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="footer__info">
+						<div class="footer__contacts">
+							<p class="footer__contacts-title">Украина</p>
+							<address class="footer__contacts-address">Одесса, ул. Толбухина, 135 ТЦ Мегадом, павильон № 129</address>
+							<a href="tel:+380487955575" class="footer__contacts-tel">+38 (048) 795 55 75</a>
+							<ul class="footer__socials">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></i></a></li>
+								<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="footer__menus">
+							<div class="footer__menu">
+								<p class="footer__menu-title">ForRoom</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Наши Услуги</a></li>
+									<li><a href="#">Портфолио</a></li>
+									<li><a href="#">Форум</a></li>
+									<li><a href="#">Контакты ForRoom</a></li>
+								</ul>
+							</div>
+
+							<div class="footer__menu">
+								<p class="footer__menu-title">Пакеты ремонта</p>
+								<ul class="footer__menu-list">
+									<li><a href="#">White Box</a></li>
+									<li><a href="#">Базовый</a></li>
+									<li><a href="#">Оптимальный</a></li>
+									<li><a href="#">Максимальный</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer__info-btn">
+							<div data-open-popup="call-popup" class="btn btn_transform">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+						</div>
+					</div>
+
+					<div class="footer__bottom">
+						<div class="footer__bottom-logo">
+							<img src="img/forroom-completely-white.png" alt="ForRoom">
+						</div>
+
+						<div class="footer__bottom-info">
+							<p class="footer__copyright">Copyright © 2021 ForRoom. All rights reserved.</p>
+							<p class="footer__creator">Created by Idea-X</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/lightgallery.min.js"></script>
+	<script src="js/lg-thumbnail.min.js"></script>
+	<script src="js/lg-fullscreen.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/optimalnyj.js"></script>
+</body>
+</html>
