@@ -1,0 +1,81 @@
+/* Brands */
+
+.brands {
+	padding: 15px 0 10%;
+	background: #ddd;
+	margin-bottom: 10px;
+	&__title {
+		font-size: 56px;
+		font-weight: 700;
+		color: #d3bebe;
+		line-height: 1;
+	}
+	&__text {
+		padding-left: 20px;
+		line-height: 1;
+		font-size: 21px;
+		font-weight: 600;
+	}
+	&__slider {
+		margin-top: 5px;
+		.swiper-slide {
+			img {
+				max-width: 100%;
+			}
+		}
+		&-wrap {
+			max-width: 240px;
+		}
+	}
+	&_forhouse {
+		padding: 10px 0 5px;
+	}
+	&_rekonstrukcija {
+		background: #c3c3c3;
+		padding: 50px 0 5px;
+		.brands__title {
+			color: #bd9d9e;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	/* Brands */
+
+	.brands__title {
+		font-size: 73px;
+	}
+
+	.brands_forhouse {
+		.brands__title {
+			font-size: 73px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	/* Brands */
+
+	.brands__title {
+		font-size: 56px;
+	}
+
+	.brands_forhouse {
+		.brands__title {
+			font-size: 42px;
+			line-height: 1.8;
+		}
+
+		.brands__text {
+			font-size: 18px;
+		}
+	}
+
+	.brands_stili {
+		padding: 30px 0;
+		.brands__text {
+			padding-left: 0;
+			margin-top: 40px;
+		}
+	}
+}

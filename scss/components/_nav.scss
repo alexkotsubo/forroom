@@ -1,0 +1,152 @@
+/* Nav */
+
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 45;
+	padding: 5px 0 12px;
+	background: rgba(95, 95, 95, .5);
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__phone {
+		text-align: center;
+		flex: 0 1 20%;
+		padding-left: 20px;
+		&:hover {
+			i {
+				color: $red;
+			}
+		}
+		i {
+			font-size: 37px;
+			transition: .3s;
+			color: #fff;
+		}
+	}
+	&__logo {
+		display: flex;
+		justify-content: center;
+		flex: 0 1 60%;
+		&-link {
+			margin: 0 30px;
+			display: block;
+			max-width: 166px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+	&__burger {
+		display: flex;
+		justify-content: center;
+		flex: 0 1 20%;
+		padding-right: 20px;
+		&_small-text {
+			.burger__link {
+				font-size: 21px;
+				font-weight: 300;
+				&.active {
+					color: $red;
+				}
+			}
+		}
+	}
+	&__home {
+		text-align: center;
+		flex: 0 1 7%;
+		padding-left: 20px;
+		&:hover {
+			i {
+				color: $red;
+			}
+		}
+		i {
+			font-size: 29px;
+			transition: .3s;
+			color: #fff;
+		}
+	}
+	&_small {
+		background: rgb(57, 57, 57, .5);
+		padding: 8px 0 5px;
+		.burger {
+			flex: 0 1 7%;
+			padding-right: 20px;
+			&__btn {
+				height: 8px;
+				&:hover {
+					transform: translate(0, 0);
+				}
+			}
+		}
+		.nav__logo-link {
+			max-width: 210px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	/* Nav */
+
+	.nav {
+		padding: 5px 0 9px;
+		&__logo {
+			width: 70%;
+			&-link {
+				max-width: 104px;
+			}
+		}
+		&__phone {
+			flex-basis: 15%;
+			padding-left: 10px;
+		}
+		&_small {
+			padding: 17px 0;
+			.nav__logo-link {
+				max-width: 24%;
+			}
+			.nav__logo {
+				width: 72%;
+			}
+			.nav__home {
+				flex-basis: 14%;
+				padding-left: 10px;
+				width: 14%;
+			}
+			.burger {
+				flex-basis: 14%;
+				padding-right: 10px;
+				&__btn {
+					height: 12px;
+					span {
+						width: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	/* Nav */
+
+	.nav_small {
+		padding: 1.3em 0;
+		.nav__logo-link {
+			max-width: 48%;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	/* Nav */
+
+	.nav_small {
+		padding: .7em 0;
+	}
+}
